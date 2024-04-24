@@ -14,7 +14,7 @@ internal static class Extensions
         return GetValueAttribute<IconStyleAttribute, TIconType>(icon)?.FontFamily ?? throw new InvalidOperationException($"IconStyle attribute is missing from {icon}.");
     }
 
-    internal static TAttribute? GetValueAttribute<TAttribute, TIconType>(TIconType icon) 
+    internal static TAttribute? GetValueAttribute<TAttribute, TIconType>(TIconType icon)
         where TAttribute : Attribute
         where TIconType : Enum
     {
@@ -26,6 +26,7 @@ internal static class Extensions
     }
 
     internal static string ToIconGlyph<TIconType>(this TIconType icon)
+        where TIconType : Enum
     {
         return char.ConvertFromUtf32(Convert.ToInt32(icon));
     }
