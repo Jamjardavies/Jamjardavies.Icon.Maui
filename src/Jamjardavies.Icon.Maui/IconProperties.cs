@@ -2,7 +2,7 @@
 //      Copyright (c) 2024 Jamjardavies.
 // </copyright>
 
-namespace Icon.Maui;
+namespace Jamjardavies.Icon.Maui;
 
 /// <summary>
 ///     Contains all <see cref="BindableProperty" /> for icons.

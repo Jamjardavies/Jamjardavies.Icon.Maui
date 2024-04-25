@@ -2,7 +2,7 @@
 //      Copyright (c) 2024 Jamjardavies.
 // </copyright>
 
-namespace Icon.Maui;
+namespace Jamjardavies.Icon.Maui;
 
 internal class SpinnerAnimation : Animation
 {

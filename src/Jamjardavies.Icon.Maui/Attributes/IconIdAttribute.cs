@@ -1,8 +1,8 @@
-﻿// <copyright file="IconIdAttribute.cs" company="MX5Tech">
-//      Copyright (c) MX5Tech. All rights reserved.
+﻿// <copyright file="IconIdAttribute.cs" company="Jamjardavies">
+//      Copyright (c) 2024 Jamjardavies.
 // </copyright>
 
-namespace Icon.Maui;
+namespace Jamjardavies.Icon.Maui;
 
 /// <summary>
 ///     Represents the ID (css class name) of the icon.

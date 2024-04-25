@@ -2,7 +2,7 @@
 //      Copyright (c) MX5Tech. All rights reserved.
 // </copyright>
 
-namespace Icon.Maui;
+namespace Jamjardavies.Icon.Maui;
 
 /// <summary>
 ///     Represents the Font Family the icon is in.

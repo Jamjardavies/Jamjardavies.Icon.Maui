@@ -4,7 +4,7 @@
 
 using System.Reflection;
 
-namespace Icon.Maui;
+namespace Jamjardavies.Icon.Maui;
 
 internal static class Extensions
 {
