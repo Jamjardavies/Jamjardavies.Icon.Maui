@@ -1,0 +1,56 @@
+﻿// <copyright file="IconEnumExtensions.cs" author="Jamjardavies">
+//      Copyright (c) 2024 Jamjardavies.
+// </copyright>
+
+using System.Reflection;
+
+namespace Jamjardavies.Icon.Maui;
+
+internal static class IconEnumExtensions
+{
+    #region Methods
+
+    #region Internal
+
+    internal static string ToFontFamily<TIconType>(this TIconType icon) where TIconType : Enum
+    {
+        return GetValueAttribute<IconStyleAttribute, TIconType>(icon)?.FontFamily
+            ?? throw new InvalidOperationException($"IconStyle attribute is missing from {icon}.");
+    }
+
+    internal static TAttribute? GetValueAttribute<TAttribute, TIconType>(TIconType icon)
+        where TAttribute : Attribute where TIconType : Enum
+    {
+        MemberInfo? memberInfo = icon.GetType()
+                                     .GetMember(icon.ToString())
+                                     .FirstOrDefault(m => m.MemberType == MemberTypes.Field);
+
+        return memberInfo?.GetCustomAttributes<TAttribute>(false).SingleOrDefault();
+    }
+
+    internal static string ToIconGlyph<TIconType>(this TIconType icon) where TIconType : Enum
+    {
+        return char.ConvertFromUtf32(Convert.ToInt32(icon));
+    }
+
+    internal static FontImageSource? ToIconSource<TIconType>(this TIconType? icon, Color color, double size)
+        where TIconType : Enum
+    {
+        if (icon is null)
+        {
+            return null;
+        }
+
+        return new FontImageSource
+        {
+            Color = color,
+            FontFamily = icon.ToFontFamily(),
+            Glyph = icon.ToIconGlyph(),
+            Size = size
+        };
+    }
+
+    #endregion
+
+    #endregion
+}

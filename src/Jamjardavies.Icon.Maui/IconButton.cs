@@ -1,4 +1,4 @@
-﻿// <copyright file="IconButton.cs" company="Jamjardavies">
+﻿// <copyright file="IconButton.cs" author="Jamjardavies">
 //      Copyright (c) 2024 Jamjardavies.
 // </copyright>
 
@@ -7,14 +7,16 @@ namespace Jamjardavies.Icon.Maui;
 /// <summary>
 ///     Base button for showing an Icon.
 /// </summary>
-public abstract class IconButton<TIconType> : Button, IIcon
-    where TIconType : Enum
+public class IconButton : Button, IIcon
 {
-    /// <summary>
-    ///     Identifies the Icon dependency property.
-    /// </summary>
-    public static readonly BindableProperty IconProperty =
-        IconProperties.CreateIconProperty((TIconType)Enum.ToObject(typeof(TIconType), 0));
+    /// <inheritdoc cref="IconProperties.IconProperty" />
+    public static readonly BindableProperty IconProperty = IconProperties.IconProperty;
+
+    /// <inheritdoc cref="IconProperties.IconColorProperty" />
+    public static readonly BindableProperty IconColorProperty = IconProperties.IconColorProperty;
+
+    /// <inheritdoc cref="IconProperties.IconSizeProperty" />
+    public static readonly BindableProperty IconSizeProperty = IconProperties.IconSizeProperty;
 
     #region Properties
 
@@ -22,9 +24,9 @@ public abstract class IconButton<TIconType> : Button, IIcon
     ///     Gets or sets the FontAwesomeLabel icon.
     ///     Note: Changing this property will cause the icon to be redrawn.
     /// </summary>
-    public TIconType Icon
+    public Enum? Icon
     {
-        get => (TIconType)this.GetValue(IconProperty);
+        get => (Enum?)this.GetValue(IconProperty);
         set => this.SetValue(IconProperty, value);
     }
 
@@ -33,8 +35,8 @@ public abstract class IconButton<TIconType> : Button, IIcon
     /// </summary>
     public Color IconColor
     {
-        get => (Color)this.GetValue(IconProperties.IconColorProperty);
-        set => this.SetValue(IconProperties.IconColorProperty, value);
+        get => (Color)this.GetValue(IconColorProperty);
+        set => this.SetValue(IconColorProperty, value);
     }
 
     /// <summary>
@@ -42,8 +44,8 @@ public abstract class IconButton<TIconType> : Button, IIcon
     /// </summary>
     public int IconSize
     {
-        get => (int)this.GetValue(IconProperties.IconSizeProperty);
-        set => this.SetValue(IconProperties.IconSizeProperty, value);
+        get => (int)this.GetValue(IconSizeProperty);
+        set => this.SetValue(IconSizeProperty, value);
     }
 
     #endregion
@@ -57,29 +59,19 @@ public abstract class IconButton<TIconType> : Button, IIcon
     /// <inheritdoc />
     public void UpdateIcon()
     {
-        ImageSource image = this.CreateImageSource();
+        Enum? icon = this.Icon;
+
+        if (icon is null)
+        {
+            return;
+        }
+
+        ImageSource? image = icon.ToIconSource(this.IconColor, this.IconSize);
 
         this.SetValue(ImageSourceProperty, image);
     }
 
     #endregion
-
-    #endregion
-
-    #region Private
-
-    private FontImageSource CreateImageSource()
-    {
-        TIconType icon = this.Icon;
-
-        return new FontImageSource
-        {
-            Color = this.IconColor,
-            FontFamily = icon.ToFontFamily(),
-            Glyph = icon.ToIconGlyph(),
-            Size = this.IconSize
-        };
-    }
 
     #endregion
 

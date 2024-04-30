@@ -2,7 +2,7 @@ root = true
 
 [*.cs]
 # Header
-file_header_template = <copyright file="{fileName}" company="Jamjardavies">\n     Copyright (c) 2024 Jamjardavies.\n</copyright>
+file_header_template = <copyright file="{fileName}" author="Jamjardavies">\n     Copyright (c) 2024 Jamjardavies.\n</copyright>
 
 [*]
 # Format

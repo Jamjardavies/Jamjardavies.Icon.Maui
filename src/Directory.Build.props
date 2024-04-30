@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <TargetFrameworks>net8.0</TargetFrameworks>
+        <UseMaui>true</UseMaui>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <LangVersion>10.0</LangVersion>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Title>Icons.Maui</Title>
+        <Version>1.0.1</Version>
+        <AssemblyVersion>$(Version)</AssemblyVersion>
+        <AssemblyFileVersion>$(Version)</AssemblyFileVersion>
+        <Product>$(AssemblyName) ($(TargetFramework))</Product>
+        <PackageVersion>$(Version)$(VersionSuffix)</PackageVersion>
+        <UseFullSemVerForNuGet>false</UseFullSemVerForNuGet>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <Authors>Jamjardavies</Authors>
+        <Owners>Jamjardavies</Owners>
+        <NeutralLanguage>en</NeutralLanguage>
+        <DefineConstants>$(DefineConstants);</DefineConstants>
+        <Configurations>Debug;Release</Configurations>
+        <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+        <GitInfoReportImportance>high</GitInfoReportImportance>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/Jamjardavies/Icon.Maui</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/Jamjardavies/Icon.Maui</RepositoryUrl>
+        <Copyright>Copyright (c) 2024 Jamjardavies</Copyright>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="Resources\Fonts\*" />
+    </ItemGroup>
+
+    <ItemGroup>
+		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.21" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.21" />
+	</ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\..\README.md">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+    </ItemGroup>
+</Project>

@@ -1,4 +1,4 @@
-﻿// <copyright file="IconProperties.cs" company="Jamjardavies">
+﻿// <copyright file="IconProperties.cs" author="Jamjardavies">
 //      Copyright (c) 2024 Jamjardavies.
 // </copyright>
 
@@ -9,6 +9,15 @@ namespace Jamjardavies.Icon.Maui;
 /// </summary>
 public static class IconProperties
 {
+    /// <summary>
+    ///     Identifies the Icon dependency property.
+    /// </summary>
+    public static readonly BindableProperty IconProperty = BindableProperty.Create(
+        "Icon",
+        typeof(Enum),
+        typeof(IIcon),
+        propertyChanged: OnIconChanged);
+
     /// <summary>
     ///     Identifies the IconColor dependency property.
     /// </summary>

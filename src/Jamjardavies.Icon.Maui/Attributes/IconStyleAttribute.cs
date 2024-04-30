@@ -1,5 +1,5 @@
-﻿// <copyright file="IconStyleAttribute.cs" company="MX5Tech">
-//      Copyright (c) MX5Tech. All rights reserved.
+﻿// <copyright file="IconStyleAttribute.cs" author="Jamjardavies">
+//      Copyright (c) 2024 Jamjardavies.
 // </copyright>
 
 namespace Jamjardavies.Icon.Maui;

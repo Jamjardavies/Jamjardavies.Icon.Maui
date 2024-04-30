@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <PackageId>Jamjardavies.Icon.Maui.FontAwesome</PackageId>
+        <Summary>Adds FontAwesome icons.</Summary>
+        <Product>Icon.Maui</Product>
+        <Description>Adds FontAwesome icons.</Description>
+        <PackageTags>MauiIcons,Icons,Maui,Icon,FontAwesome,Font,Awesome</PackageTags>
+    </PropertyGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\Jamjardavies.Icon.Maui\Jamjardavies.Icon.Maui.csproj" />
+    </ItemGroup>
+</Project>

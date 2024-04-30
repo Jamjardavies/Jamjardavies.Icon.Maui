@@ -1,4 +1,4 @@
-﻿// <copyright file="SpinnerAnimation.cs" company="Jamjardavies">
+﻿// <copyright file="SpinnerAnimation.cs" author="Jamjardavies">
 //      Copyright (c) 2024 Jamjardavies.
 // </copyright>
 
@@ -20,7 +20,11 @@ internal class SpinnerAnimation : Animation
         this.element = element;
     }
 
+    #region Properties
+
     public double Length { get; set; } = 1;
+
+    #endregion
 
     #region Methods
 

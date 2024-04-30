@@ -1,4 +1,4 @@
-﻿// <copyright file="IIcon.cs" company="Jamjardavies">
+﻿// <copyright file="IIcon.cs" author="Jamjardavies">
 //      Copyright (c) 2024 Jamjardavies.
 // </copyright>
 

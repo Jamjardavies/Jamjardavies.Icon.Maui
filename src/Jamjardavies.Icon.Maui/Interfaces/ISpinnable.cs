@@ -1,4 +1,4 @@
-﻿// <copyright file="ISpinnable.cs" company="Jamjardavies">
+﻿// <copyright file="ISpinnable.cs" author="Jamjardavies">
 //      Copyright (c) 2024 Jamjardavies.
 // </copyright>
 
