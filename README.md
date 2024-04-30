@@ -36,15 +36,15 @@ To use the icons in Xaml, first a namespace is required using: `xmlns:icon="http
 Using ImageSource:
 ```xml
 <Button ImageSource="{icon:FontAwesome Facebook}"
-                Text="Facebook"
-                FontSize="32" />
+        Text="Facebook"
+        FontSize="32" />
 ```
 
 Using ImageSource and Text:
 ```xml
 <Button ImageSource="{icon:FontAwesome Facebook}"
-                Text="{icon:FontAwesome Facebook}"
-                FontSize="32" />
+        Text="{icon:FontAwesome Facebook}"
+        FontSize="32" />
 ```
 
 ### IconLabel
