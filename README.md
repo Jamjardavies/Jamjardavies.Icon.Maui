@@ -24,6 +24,17 @@ return MauiApp.CreateBuilder()
               .Build();
 ```
 
+## Using Jamjardavies.Icon.Maui.Material
+First, inside of the `MauiProgram.cs` file, add `UseMaterial`
+
+```csharp
+return MauiApp.CreateBuilder()
+              .UseMauiApp<App>()
+              .UseMauiIcons()
+              .UseMaterial()
+              .Build();
+```
+
 ## Xaml
 To use the icons in Xaml, first a namespace is required using: `xmlns:icon="http://www.jamjardavies.co.uk/maui/icon"`, next use the following controls:
 

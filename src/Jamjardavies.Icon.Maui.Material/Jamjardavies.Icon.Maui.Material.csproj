@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <PackageId>Jamjardavies.Icon.Maui.Material</PackageId>
+        <Summary>Adds Material icons.</Summary>
+        <Product>Icon.Maui</Product>
+        <Description>Adds Material icons.</Description>
+        <PackageTags>MauiIcons,Icons,Maui,Icon,Material,Google Material</PackageTags>
+    </PropertyGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\Jamjardavies.Icon.Maui\Jamjardavies.Icon.Maui.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Resources\Fonts\" />
+    </ItemGroup>
+</Project>
