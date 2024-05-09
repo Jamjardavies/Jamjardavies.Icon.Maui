@@ -1,25 +1,12 @@
 # Jamjardavies.Icon.Maui
 Readme will be updated soon with more information, below is a quick-start guide.
 
-## Using Jamjardavies.Icon.Maui
-First, inside of the `MauiProgram.cs` file, add `UseMauiIcons`
-
-```csharp
-return MauiApp.CreateBuilder()
-              .UseMauiApp<App>()
-              .UseMauiIcons()
-              .Build();
-```
-
-Next one of the icon packages will be required in order to use. Follow the following steps. Note: More icon packages coming soon.
-
 ## Using Jamjardavies.Icon.Maui.FontAwesome
 First, inside of the `MauiProgram.cs` file, add `UseFontAwesome`
 
 ```csharp
 return MauiApp.CreateBuilder()
               .UseMauiApp<App>()
-              .UseMauiIcons()
               .UseFontAwesome()
               .Build();
 ```
@@ -30,14 +17,11 @@ First, inside of the `MauiProgram.cs` file, add `UseMaterial`
 ```csharp
 return MauiApp.CreateBuilder()
               .UseMauiApp<App>()
-              .UseMauiIcons()
               .UseMaterial()
               .Build();
 ```
 
 ## Xaml
-To use the icons in Xaml, first a namespace is required using: `xmlns:icon="http://www.jamjardavies.co.uk/maui/icon"`, next use the following controls:
-
 ### Maui Label
 ```xml
 <Label Text="{icon:FontAwesome Spinner}" />
