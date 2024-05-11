@@ -12,7 +12,7 @@ const string faSummary = @"/// <summary>
 ///     License: https://github.com/google/material-design-icons/blob/master/LICENSE
 ///     <see href=""https://developers.google.com/fonts/docs/material_icons"" />
 ///     <seealso href=""https://github.com/google/material-design-icons"" />
-/// </summary>)";
+/// </summary>";
 /// 
 if (Args.Count != 3)
 {

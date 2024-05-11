@@ -12,7 +12,7 @@ using Jamjardavies.Icon.Maui;
 ///     License: http://fontawesome.io/license
 ///     <see href="http://fontawesome.io" />
 ///     <seealso href="https://github.com/FortAwesome/Font-Awesome" />
-/// </summary>)
+/// </summary>
 public enum FontAwesomeIcon
 {
     /// <summary>

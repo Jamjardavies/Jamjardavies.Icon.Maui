@@ -15,7 +15,8 @@ public abstract class IconExtension<TEnum> : IMarkupExtension where TEnum : Enum
     {
         { typeof(Enum), BindableType.Enum },
         { typeof(string), BindableType.String },
-        { typeof(ImageSource), BindableType.ImageSource }
+        { typeof(ImageSource), BindableType.ImageSource },
+        { typeof(FontImageSource), BindableType.ImageSource }
     };
 
     #region Properties
