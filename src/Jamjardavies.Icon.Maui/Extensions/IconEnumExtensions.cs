@@ -12,29 +12,29 @@ public static class IconEnumExtensions
 
     #region Public
 
-    public static FontImageSource? ToIconSource<TIconType>(this TIconType icon)
+    public static FontImageSource ToIconSource<TIconType>(this TIconType icon)
         where TIconType : Enum
     {
         return icon.ToIconSource(Colors.White, 32, false);
     }
 
-    public static FontImageSource? ToIconSource<TIconType>(this TIconType icon, Color color) where TIconType : Enum
+    public static FontImageSource ToIconSource<TIconType>(this TIconType icon, Color color) where TIconType : Enum
     {
         return icon.ToIconSource(color, 32, false);
     }
 
-    public static FontImageSource? ToIconSource<TIconType>(this TIconType icon, double size) where TIconType : Enum
+    public static FontImageSource ToIconSource<TIconType>(this TIconType icon, double size) where TIconType : Enum
     {
         return icon.ToIconSource(Colors.White, size, false);
     }
 
-    public static FontImageSource? ToIconSource<TIconType>(this TIconType icon, Color color, double size)
+    public static FontImageSource ToIconSource<TIconType>(this TIconType icon, Color color, double size)
         where TIconType : Enum
     {
         return icon.ToIconSource(color, size, false);
     }
 
-    public static FontImageSource? ToIconSource<TIconType>(this TIconType icon, Color color, double size, bool autoScale)
+    public static FontImageSource ToIconSource<TIconType>(this TIconType icon, Color color, double size, bool autoScale)
         where TIconType : Enum
     {
         return new FontImageSource
