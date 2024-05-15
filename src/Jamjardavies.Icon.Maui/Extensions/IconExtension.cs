@@ -68,7 +68,7 @@ public abstract class IconExtension<TIcon, TIconStyle> : IMarkupExtension
         {
             BindableType.Icon => new Icon(this.Icon, this.GetIconStyle()),
             BindableType.String => this.PopulateString(valueProvider.TargetObject),
-            BindableType.ImageSource => this.Icon.ToIconSource(this.GetIconStyle(), this.IconColor, this.IconSize),
+            BindableType.ImageSource => this.Icon.ToImageSource(this.GetIconStyle(), this.IconColor, this.IconSize),
             _ => throw new InvalidOperationException()
         };
     }
