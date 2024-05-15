@@ -66,7 +66,7 @@ public class IconButton : Button, IIcon
             return;
         }
 
-        ImageSource? image = icon.Glyph.ToIconSource(icon.Style, this.IconColor, this.IconSize);
+        ImageSource? image = icon.Glyph.ToImageSource(icon.Style, this.IconColor, this.IconSize);
 
         this.SetValue(ImageSourceProperty, image);
     }

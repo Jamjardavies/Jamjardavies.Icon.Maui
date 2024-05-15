@@ -12,41 +12,41 @@ public static class IconEnumExtensions
 
     #region Public
 
-    public static FontImageSource ToIconSource<TIcon>(this TIcon icon)
+    public static FontImageSource ToImageSource<TIcon>(this TIcon icon)
         where TIcon : Enum
     {
-        return icon.ToIconSource(string.Empty, Colors.White, 32, false);
+        return icon.ToImageSource(string.Empty, Colors.White, 32, false);
     }
 
-    public static FontImageSource ToIconSource<TIcon>(this TIcon icon, Color color) where TIcon : Enum
+    public static FontImageSource ToImageSource<TIcon>(this TIcon icon, Color color) where TIcon : Enum
     {
-        return icon.ToIconSource(string.Empty, color, 32, false);
+        return icon.ToImageSource(string.Empty, color, 32, false);
     }
 
-    public static FontImageSource ToIconSource<TIcon>(this TIcon icon, double size) where TIcon : Enum
+    public static FontImageSource ToImageSource<TIcon>(this TIcon icon, double size) where TIcon : Enum
     {
-        return icon.ToIconSource(string.Empty, Colors.White, size, false);
+        return icon.ToImageSource(string.Empty, Colors.White, size, false);
     }
 
-    public static FontImageSource ToIconSource<TIcon>(this TIcon icon, Color color, double size)
+    public static FontImageSource ToImageSource<TIcon>(this TIcon icon, Color color, double size)
         where TIcon : Enum
     {
-        return icon.ToIconSource(string.Empty, color, size, false);
+        return icon.ToImageSource(string.Empty, color, size, false);
     }
 
-    public static FontImageSource ToIconSource<TIcon>(this TIcon icon, string iconStyle, Color color, double size)
+    public static FontImageSource ToImageSource<TIcon>(this TIcon icon, string iconStyle, Color color, double size)
         where TIcon : Enum
     {
-        return icon.ToIconSource(iconStyle, color, size, false);
+        return icon.ToImageSource(iconStyle, color, size, false);
     }
 
-    public static FontImageSource ToIconSource<TIcon>(this TIcon icon, Color color, double size, bool autoScale)
+    public static FontImageSource ToImageSource<TIcon>(this TIcon icon, Color color, double size, bool autoScale)
         where TIcon : Enum
     {
-        return icon.ToIconSource(string.Empty, color, size, autoScale);
+        return icon.ToImageSource(string.Empty, color, size, autoScale);
     }
 
-    public static FontImageSource ToIconSource<TIcon>(this TIcon icon, string iconStyle, Color color, double size, bool autoScale)
+    public static FontImageSource ToImageSource<TIcon>(this TIcon icon, string iconStyle, Color color, double size, bool autoScale)
         where TIcon : Enum
     {
         return new FontImageSource
