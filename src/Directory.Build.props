@@ -29,6 +29,7 @@
         <RepositoryUrl>https://github.com/Jamjardavies/Icon.Maui</RepositoryUrl>
         <Copyright>Copyright (c) 2024 Jamjardavies</Copyright>
         <PackageReadmeFile>README.md</PackageReadmeFile>
+        <IsPackable>true</IsPackable>
     </PropertyGroup>
 
     <ItemGroup>
