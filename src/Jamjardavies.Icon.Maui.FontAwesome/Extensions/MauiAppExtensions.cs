@@ -17,13 +17,18 @@ public static class MauiAppExtensions
             {
                 fonts.AddEmbeddedResourceFont(
                     typeof(MauiAppExtensions).Assembly,
-                    "FontAwesomeBrands-Regular.otf",
-                    "FontAwesomeBrands");
+                    "FontAwesome-Solid.otf",
+                    FontAwesomeExtension.SolidStyle);
 
                 fonts.AddEmbeddedResourceFont(
                     typeof(MauiAppExtensions).Assembly,
-                    "FontAwesome-Solid.otf",
-                    "FontAwesomeSolid");
+                    "FontAwesome-Regular.otf",
+                    FontAwesomeExtension.RegularStyle);
+
+                fonts.AddEmbeddedResourceFont(
+                    typeof(MauiAppExtensions).Assembly,
+                    "FontAwesomeBrands-Regular.otf",
+                    FontAwesomeExtension.BrandsStyle);
             });
 
         return builder;

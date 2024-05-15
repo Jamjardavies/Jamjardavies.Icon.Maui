@@ -9,11 +9,13 @@ using Microsoft.Maui.Graphics.Converters;
 namespace Jamjardavies.Icon.Maui;
 
 [ContentProperty(nameof(Icon))]
-public abstract class IconExtension<TEnum> : IMarkupExtension where TEnum : Enum
+public abstract class IconExtension<TIcon, TIconStyle> : IMarkupExtension
+    where TIcon : Enum
+    where TIconStyle : Enum
 {
     private static readonly Dictionary<Type, BindableType> BindableTypeMap = new()
     {
-        { typeof(Enum), BindableType.Enum },
+        { typeof(Icon), BindableType.Icon },
         { typeof(string), BindableType.String },
         { typeof(ImageSource), BindableType.ImageSource },
         { typeof(FontImageSource), BindableType.ImageSource }
@@ -21,13 +23,17 @@ public abstract class IconExtension<TEnum> : IMarkupExtension where TEnum : Enum
 
     #region Properties
 
-    public TEnum? Icon { get; set; }
+    public TIcon? Icon { get; set; }
+
+    public TIconStyle? IconStyle { get; set; }
 
     [TypeConverter(typeof(ColorTypeConverter))]
     public Color IconColor { get; set; } = Colors.White;
 
     [TypeConverter(typeof(FontSizeConverter))]
     public double IconSize { get; set; } = 32;
+
+    protected abstract Dictionary<TIconStyle, string> IconStyleMap { get; }
 
     #endregion
 
@@ -60,7 +66,7 @@ public abstract class IconExtension<TEnum> : IMarkupExtension where TEnum : Enum
 
         return type switch
         {
-            BindableType.Enum => this.Icon,
+            BindableType.Icon => new Icon(this.Icon, this.GetIconStyle()),
             BindableType.String => this.PopulateString(valueProvider.TargetObject),
             BindableType.ImageSource => this.Icon.ToIconSource(this.IconColor, this.IconSize),
             _ => throw new InvalidOperationException()
@@ -73,6 +79,16 @@ public abstract class IconExtension<TEnum> : IMarkupExtension where TEnum : Enum
 
     #region Private
 
+    private string GetIconStyle()
+    {
+        if (this.IconStyle is null || !this.IconStyleMap.TryGetValue(this.IconStyle, out string? fontFamily))
+        {
+            return string.Empty;
+        }
+
+        return fontFamily;
+    }
+
     private string PopulateString(object targetObject)
     {
         if (this.Icon is null)
@@ -82,10 +98,12 @@ public abstract class IconExtension<TEnum> : IMarkupExtension where TEnum : Enum
 
         PropertyInfo? fontFamilyProp = targetObject.GetType().GetProperty("FontFamily");
 
-        if (fontFamilyProp is not null && fontFamilyProp.CanWrite)
+        if (fontFamilyProp is null || !fontFamilyProp.CanWrite)
         {
-            fontFamilyProp.SetValue(targetObject, this.Icon.ToFontFamily());
+            return this.Icon.ToIconGlyph();
         }
+
+        fontFamilyProp.SetValue(targetObject, this.Icon.ToFontFamily(this.GetIconStyle()));
 
         return this.Icon.ToIconGlyph();
     }
@@ -98,7 +116,7 @@ public abstract class IconExtension<TEnum> : IMarkupExtension where TEnum : Enum
 
     private enum BindableType
     {
-        Enum,
+        Icon,
         String,
         ImageSource
     }

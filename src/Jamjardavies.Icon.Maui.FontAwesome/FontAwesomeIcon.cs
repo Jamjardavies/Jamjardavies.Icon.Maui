@@ -109,13 +109,13 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Address Book
     /// </summary>
     /// <see href="http://fontawesome.io/icon/address-book" />
-    [Description("Address Book"), IconId("address-book"), IconStyle("FontAwesomeSolid")]
+    [Description("Address Book"), IconId("address-book"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     AddressBook = 0xf2b9,
     /// <summary>
     /// 	Font Awesome icon for Address Card
     /// </summary>
     /// <see href="http://fontawesome.io/icon/address-card" />
-    [Description("Address Card"), IconId("address-card"), IconStyle("FontAwesomeSolid")]
+    [Description("Address Card"), IconId("address-card"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     AddressCard = 0xf2bb,
     /// <summary>
     /// 	Font Awesome icon for App.net
@@ -967,7 +967,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Bell
     /// </summary>
     /// <see href="http://fontawesome.io/icon/bell" />
-    [Description("Bell"), IconId("bell"), IconStyle("FontAwesomeSolid")]
+    [Description("Bell"), IconId("bell"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Bell = 0xf0f3,
     /// <summary>
     /// 	Font Awesome icon for Bell Concierge
@@ -979,7 +979,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Bell Slash
     /// </summary>
     /// <see href="http://fontawesome.io/icon/bell-slash" />
-    [Description("Bell Slash"), IconId("bell-slash"), IconStyle("FontAwesomeSolid")]
+    [Description("Bell Slash"), IconId("bell-slash"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     BellSlash = 0xf1f6,
     /// <summary>
     /// 	Font Awesome icon for Bezier Curve
@@ -1207,7 +1207,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Bookmark
     /// </summary>
     /// <see href="http://fontawesome.io/icon/bookmark" />
-    [Description("Bookmark"), IconId("bookmark"), IconStyle("FontAwesomeSolid")]
+    [Description("Bookmark"), IconId("bookmark"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Bookmark = 0xf02e,
     /// <summary>
     /// 	Font Awesome icon for Bootstrap
@@ -1453,7 +1453,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Building
     /// </summary>
     /// <see href="http://fontawesome.io/icon/building" />
-    [Description("Building"), IconId("building"), IconStyle("FontAwesomeSolid")]
+    [Description("Building"), IconId("building"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Building = 0xf1ad,
     /// <summary>
     /// 	Font Awesome icon for Building Circle Arrow Right
@@ -1615,13 +1615,13 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Calendar
     /// </summary>
     /// <see href="http://fontawesome.io/icon/calendar" />
-    [Description("Calendar"), IconId("calendar"), IconStyle("FontAwesomeSolid")]
+    [Description("Calendar"), IconId("calendar"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Calendar = 0xf133,
     /// <summary>
     /// 	Font Awesome icon for Calendar Check
     /// </summary>
     /// <see href="http://fontawesome.io/icon/calendar-check" />
-    [Description("Calendar Check"), IconId("calendar-check"), IconStyle("FontAwesomeSolid")]
+    [Description("Calendar Check"), IconId("calendar-check"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     CalendarCheck = 0xf274,
     /// <summary>
     /// 	Font Awesome icon for Calendar Day
@@ -1633,19 +1633,19 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Calendar Days
     /// </summary>
     /// <see href="http://fontawesome.io/icon/calendar-days" />
-    [Description("Calendar Days"), IconId("calendar-days"), IconStyle("FontAwesomeSolid")]
+    [Description("Calendar Days"), IconId("calendar-days"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     CalendarDays = 0xf073,
     /// <summary>
     /// 	Font Awesome icon for Calendar Minus
     /// </summary>
     /// <see href="http://fontawesome.io/icon/calendar-minus" />
-    [Description("Calendar Minus"), IconId("calendar-minus"), IconStyle("FontAwesomeSolid")]
+    [Description("Calendar Minus"), IconId("calendar-minus"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     CalendarMinus = 0xf272,
     /// <summary>
     /// 	Font Awesome icon for Calendar Plus
     /// </summary>
     /// <see href="http://fontawesome.io/icon/calendar-plus" />
-    [Description("Calendar Plus"), IconId("calendar-plus"), IconStyle("FontAwesomeSolid")]
+    [Description("Calendar Plus"), IconId("calendar-plus"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     CalendarPlus = 0xf271,
     /// <summary>
     /// 	Font Awesome icon for Calendar Week
@@ -1657,7 +1657,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Calendar Xmark
     /// </summary>
     /// <see href="http://fontawesome.io/icon/calendar-xmark" />
-    [Description("Calendar Xmark"), IconId("calendar-xmark"), IconStyle("FontAwesomeSolid")]
+    [Description("Calendar Xmark"), IconId("calendar-xmark"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     CalendarXmark = 0xf273,
     /// <summary>
     /// 	Font Awesome icon for Camera
@@ -1957,7 +1957,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Chart Bar
     /// </summary>
     /// <see href="http://fontawesome.io/icon/chart-bar" />
-    [Description("Chart Bar"), IconId("chart-bar"), IconStyle("FontAwesomeSolid")]
+    [Description("Chart Bar"), IconId("chart-bar"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     ChartBar = 0xf080,
     /// <summary>
     /// 	Font Awesome icon for Chart Column
@@ -2023,7 +2023,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Chess Bishop
     /// </summary>
     /// <see href="http://fontawesome.io/icon/chess-bishop" />
-    [Description("Chess Bishop"), IconId("chess-bishop"), IconStyle("FontAwesomeSolid")]
+    [Description("Chess Bishop"), IconId("chess-bishop"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     ChessBishop = 0xf43a,
     /// <summary>
     /// 	Font Awesome icon for Chess Board
@@ -2035,31 +2035,31 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Chess King
     /// </summary>
     /// <see href="http://fontawesome.io/icon/chess-king" />
-    [Description("Chess King"), IconId("chess-king"), IconStyle("FontAwesomeSolid")]
+    [Description("Chess King"), IconId("chess-king"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     ChessKing = 0xf43f,
     /// <summary>
     /// 	Font Awesome icon for Chess Knight
     /// </summary>
     /// <see href="http://fontawesome.io/icon/chess-knight" />
-    [Description("Chess Knight"), IconId("chess-knight"), IconStyle("FontAwesomeSolid")]
+    [Description("Chess Knight"), IconId("chess-knight"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     ChessKnight = 0xf441,
     /// <summary>
     /// 	Font Awesome icon for Chess Pawn
     /// </summary>
     /// <see href="http://fontawesome.io/icon/chess-pawn" />
-    [Description("Chess Pawn"), IconId("chess-pawn"), IconStyle("FontAwesomeSolid")]
+    [Description("Chess Pawn"), IconId("chess-pawn"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     ChessPawn = 0xf443,
     /// <summary>
     /// 	Font Awesome icon for Chess Queen
     /// </summary>
     /// <see href="http://fontawesome.io/icon/chess-queen" />
-    [Description("Chess Queen"), IconId("chess-queen"), IconStyle("FontAwesomeSolid")]
+    [Description("Chess Queen"), IconId("chess-queen"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     ChessQueen = 0xf445,
     /// <summary>
     /// 	Font Awesome icon for Chess Rook
     /// </summary>
     /// <see href="http://fontawesome.io/icon/chess-rook" />
-    [Description("Chess Rook"), IconId("chess-rook"), IconStyle("FontAwesomeSolid")]
+    [Description("Chess Rook"), IconId("chess-rook"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     ChessRook = 0xf447,
     /// <summary>
     /// 	Font Awesome icon for Chevron Down
@@ -2137,7 +2137,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Circle
     /// </summary>
     /// <see href="http://fontawesome.io/icon/circle" />
-    [Description("Circle"), IconId("circle"), IconStyle("FontAwesomeSolid")]
+    [Description("Circle"), IconId("circle"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Circle = 0xf111,
     /// <summary>
     /// 	Font Awesome icon for Circle Arrow Down
@@ -2167,7 +2167,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Circle Check
     /// </summary>
     /// <see href="http://fontawesome.io/icon/circle-check" />
-    [Description("Circle Check"), IconId("circle-check"), IconStyle("FontAwesomeSolid")]
+    [Description("Circle Check"), IconId("circle-check"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     CircleCheck = 0xf058,
     /// <summary>
     /// 	Font Awesome icon for Circle Chevron Down
@@ -2203,13 +2203,13 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Circle Dot
     /// </summary>
     /// <see href="http://fontawesome.io/icon/circle-dot" />
-    [Description("Circle Dot"), IconId("circle-dot"), IconStyle("FontAwesomeSolid")]
+    [Description("Circle Dot"), IconId("circle-dot"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     CircleDot = 0xf192,
     /// <summary>
     /// 	Font Awesome icon for Circle Down
     /// </summary>
     /// <see href="http://fontawesome.io/icon/circle-down" />
-    [Description("Circle Down"), IconId("circle-down"), IconStyle("FontAwesomeSolid")]
+    [Description("Circle Down"), IconId("circle-down"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     CircleDown = 0xf358,
     /// <summary>
     /// 	Font Awesome icon for Circle Exclamation
@@ -2239,7 +2239,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Circle Left
     /// </summary>
     /// <see href="http://fontawesome.io/icon/circle-left" />
-    [Description("Circle Left"), IconId("circle-left"), IconStyle("FontAwesomeSolid")]
+    [Description("Circle Left"), IconId("circle-left"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     CircleLeft = 0xf359,
     /// <summary>
     /// 	Font Awesome icon for Circle Minus
@@ -2263,13 +2263,13 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Circle Pause
     /// </summary>
     /// <see href="http://fontawesome.io/icon/circle-pause" />
-    [Description("Circle Pause"), IconId("circle-pause"), IconStyle("FontAwesomeSolid")]
+    [Description("Circle Pause"), IconId("circle-pause"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     CirclePause = 0xf28b,
     /// <summary>
     /// 	Font Awesome icon for Circle Play
     /// </summary>
     /// <see href="http://fontawesome.io/icon/circle-play" />
-    [Description("Circle Play"), IconId("circle-play"), IconStyle("FontAwesomeSolid")]
+    [Description("Circle Play"), IconId("circle-play"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     CirclePlay = 0xf144,
     /// <summary>
     /// 	Font Awesome icon for Circle Plus
@@ -2281,7 +2281,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Circle Question
     /// </summary>
     /// <see href="http://fontawesome.io/icon/circle-question" />
-    [Description("Circle Question"), IconId("circle-question"), IconStyle("FontAwesomeSolid")]
+    [Description("Circle Question"), IconId("circle-question"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     CircleQuestion = 0xf059,
     /// <summary>
     /// 	Font Awesome icon for Circle Radiation
@@ -2293,31 +2293,31 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Circle Right
     /// </summary>
     /// <see href="http://fontawesome.io/icon/circle-right" />
-    [Description("Circle Right"), IconId("circle-right"), IconStyle("FontAwesomeSolid")]
+    [Description("Circle Right"), IconId("circle-right"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     CircleRight = 0xf35a,
     /// <summary>
     /// 	Font Awesome icon for Circle Stop
     /// </summary>
     /// <see href="http://fontawesome.io/icon/circle-stop" />
-    [Description("Circle Stop"), IconId("circle-stop"), IconStyle("FontAwesomeSolid")]
+    [Description("Circle Stop"), IconId("circle-stop"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     CircleStop = 0xf28d,
     /// <summary>
     /// 	Font Awesome icon for Circle Up
     /// </summary>
     /// <see href="http://fontawesome.io/icon/circle-up" />
-    [Description("Circle Up"), IconId("circle-up"), IconStyle("FontAwesomeSolid")]
+    [Description("Circle Up"), IconId("circle-up"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     CircleUp = 0xf35b,
     /// <summary>
     /// 	Font Awesome icon for Circle User
     /// </summary>
     /// <see href="http://fontawesome.io/icon/circle-user" />
-    [Description("Circle User"), IconId("circle-user"), IconStyle("FontAwesomeSolid")]
+    [Description("Circle User"), IconId("circle-user"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     CircleUser = 0xf2bd,
     /// <summary>
     /// 	Font Awesome icon for Circle Xmark
     /// </summary>
     /// <see href="http://fontawesome.io/icon/circle-xmark" />
-    [Description("Circle Xmark"), IconId("circle-xmark"), IconStyle("FontAwesomeSolid")]
+    [Description("Circle Xmark"), IconId("circle-xmark"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     CircleXmark = 0xf057,
     /// <summary>
     /// 	Font Awesome icon for City
@@ -2335,7 +2335,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Clipboard
     /// </summary>
     /// <see href="http://fontawesome.io/icon/clipboard" />
-    [Description("Clipboard"), IconId("clipboard"), IconStyle("FontAwesomeSolid")]
+    [Description("Clipboard"), IconId("clipboard"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Clipboard = 0xf328,
     /// <summary>
     /// 	Font Awesome icon for Clipboard Check
@@ -2365,7 +2365,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Clock
     /// </summary>
     /// <see href="http://fontawesome.io/icon/clock" />
-    [Description("Clock"), IconId("clock"), IconStyle("FontAwesomeSolid")]
+    [Description("Clock"), IconId("clock"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Clock = 0xf017,
     /// <summary>
     /// 	Font Awesome icon for Clock Rotate Left
@@ -2377,13 +2377,13 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Clone
     /// </summary>
     /// <see href="http://fontawesome.io/icon/clone" />
-    [Description("Clone"), IconId("clone"), IconStyle("FontAwesomeSolid")]
+    [Description("Clone"), IconId("clone"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Clone = 0xf24d,
     /// <summary>
     /// 	Font Awesome icon for Closed Captioning
     /// </summary>
     /// <see href="http://fontawesome.io/icon/closed-captioning" />
-    [Description("Closed Captioning"), IconId("closed-captioning"), IconStyle("FontAwesomeSolid")]
+    [Description("Closed Captioning"), IconId("closed-captioning"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     ClosedCaptioning = 0xf20a,
     /// <summary>
     /// 	Font Awesome icon for Cloud
@@ -2563,7 +2563,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Comment
     /// </summary>
     /// <see href="http://fontawesome.io/icon/comment" />
-    [Description("Comment"), IconId("comment"), IconStyle("FontAwesomeSolid")]
+    [Description("Comment"), IconId("comment"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Comment = 0xf075,
     /// <summary>
     /// 	Font Awesome icon for Comment Dollar
@@ -2575,7 +2575,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Comment Dots
     /// </summary>
     /// <see href="http://fontawesome.io/icon/comment-dots" />
-    [Description("Comment Dots"), IconId("comment-dots"), IconStyle("FontAwesomeSolid")]
+    [Description("Comment Dots"), IconId("comment-dots"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     CommentDots = 0xf4ad,
     /// <summary>
     /// 	Font Awesome icon for Comment Medical
@@ -2599,7 +2599,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Comments
     /// </summary>
     /// <see href="http://fontawesome.io/icon/comments" />
-    [Description("Comments"), IconId("comments"), IconStyle("FontAwesomeSolid")]
+    [Description("Comments"), IconId("comments"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Comments = 0xf086,
     /// <summary>
     /// 	Font Awesome icon for Comments Dollar
@@ -2617,7 +2617,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Compass
     /// </summary>
     /// <see href="http://fontawesome.io/icon/compass" />
-    [Description("Compass"), IconId("compass"), IconStyle("FontAwesomeSolid")]
+    [Description("Compass"), IconId("compass"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Compass = 0xf14e,
     /// <summary>
     /// 	Font Awesome icon for Compass Drafting
@@ -2677,13 +2677,13 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Copy
     /// </summary>
     /// <see href="http://fontawesome.io/icon/copy" />
-    [Description("Copy"), IconId("copy"), IconStyle("FontAwesomeSolid")]
+    [Description("Copy"), IconId("copy"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Copy = 0xf0c5,
     /// <summary>
     /// 	Font Awesome icon for Copyright
     /// </summary>
     /// <see href="http://fontawesome.io/icon/copyright" />
-    [Description("Copyright"), IconId("copyright"), IconStyle("FontAwesomeSolid")]
+    [Description("Copyright"), IconId("copyright"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Copyright = 0xf1f9,
     /// <summary>
     /// 	Font Awesome icon for Cotton Bureau
@@ -2797,7 +2797,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Credit Card
     /// </summary>
     /// <see href="http://fontawesome.io/icon/credit-card" />
-    [Description("Credit Card"), IconId("credit-card"), IconStyle("FontAwesomeSolid")]
+    [Description("Credit Card"), IconId("credit-card"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     CreditCard = 0xf09d,
     /// <summary>
     /// 	Font Awesome icon for Critical Role
@@ -3439,7 +3439,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Envelope
     /// </summary>
     /// <see href="http://fontawesome.io/icon/envelope" />
-    [Description("Envelope"), IconId("envelope"), IconStyle("FontAwesomeSolid")]
+    [Description("Envelope"), IconId("envelope"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Envelope = 0xf0e0,
     /// <summary>
     /// 	Font Awesome icon for Envelope Circle Check
@@ -3451,7 +3451,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Envelope Open
     /// </summary>
     /// <see href="http://fontawesome.io/icon/envelope-open" />
-    [Description("Envelope Open"), IconId("envelope-open"), IconStyle("FontAwesomeSolid")]
+    [Description("Envelope Open"), IconId("envelope-open"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     EnvelopeOpen = 0xf2b6,
     /// <summary>
     /// 	Font Awesome icon for Envelope Open Text
@@ -3547,7 +3547,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Eye
     /// </summary>
     /// <see href="http://fontawesome.io/icon/eye" />
-    [Description("Eye"), IconId("eye"), IconStyle("FontAwesomeSolid")]
+    [Description("Eye"), IconId("eye"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Eye = 0xf06e,
     /// <summary>
     /// 	Font Awesome icon for Eye Dropper
@@ -3565,7 +3565,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Eye Slash
     /// </summary>
     /// <see href="http://fontawesome.io/icon/eye-slash" />
-    [Description("Eye Slash"), IconId("eye-slash"), IconStyle("FontAwesomeSolid")]
+    [Description("Eye Slash"), IconId("eye-slash"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     EyeSlash = 0xf070,
     /// <summary>
     /// 	Font Awesome icon for F
@@ -3577,217 +3577,217 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Face Angry
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-angry" />
-    [Description("Face Angry"), IconId("face-angry"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Angry"), IconId("face-angry"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceAngry = 0xf556,
     /// <summary>
     /// 	Font Awesome icon for Face Dizzy
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-dizzy" />
-    [Description("Face Dizzy"), IconId("face-dizzy"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Dizzy"), IconId("face-dizzy"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceDizzy = 0xf567,
     /// <summary>
     /// 	Font Awesome icon for Face Flushed
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-flushed" />
-    [Description("Face Flushed"), IconId("face-flushed"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Flushed"), IconId("face-flushed"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceFlushed = 0xf579,
     /// <summary>
     /// 	Font Awesome icon for Face Frown
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-frown" />
-    [Description("Face Frown"), IconId("face-frown"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Frown"), IconId("face-frown"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceFrown = 0xf119,
     /// <summary>
     /// 	Font Awesome icon for Face Frown Open
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-frown-open" />
-    [Description("Face Frown Open"), IconId("face-frown-open"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Frown Open"), IconId("face-frown-open"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceFrownOpen = 0xf57a,
     /// <summary>
     /// 	Font Awesome icon for Face Grimace
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-grimace" />
-    [Description("Face Grimace"), IconId("face-grimace"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Grimace"), IconId("face-grimace"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceGrimace = 0xf57f,
     /// <summary>
     /// 	Font Awesome icon for Face Grin
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-grin" />
-    [Description("Face Grin"), IconId("face-grin"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Grin"), IconId("face-grin"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceGrin = 0xf580,
     /// <summary>
     /// 	Font Awesome icon for Face Grin Beam
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-grin-beam" />
-    [Description("Face Grin Beam"), IconId("face-grin-beam"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Grin Beam"), IconId("face-grin-beam"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceGrinBeam = 0xf582,
     /// <summary>
     /// 	Font Awesome icon for Face Grin Beam Sweat
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-grin-beam-sweat" />
-    [Description("Face Grin Beam Sweat"), IconId("face-grin-beam-sweat"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Grin Beam Sweat"), IconId("face-grin-beam-sweat"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceGrinBeamSweat = 0xf583,
     /// <summary>
     /// 	Font Awesome icon for Face Grin Hearts
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-grin-hearts" />
-    [Description("Face Grin Hearts"), IconId("face-grin-hearts"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Grin Hearts"), IconId("face-grin-hearts"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceGrinHearts = 0xf584,
     /// <summary>
     /// 	Font Awesome icon for Face Grin Squint
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-grin-squint" />
-    [Description("Face Grin Squint"), IconId("face-grin-squint"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Grin Squint"), IconId("face-grin-squint"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceGrinSquint = 0xf585,
     /// <summary>
     /// 	Font Awesome icon for Face Grin Squint Tears
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-grin-squint-tears" />
-    [Description("Face Grin Squint Tears"), IconId("face-grin-squint-tears"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Grin Squint Tears"), IconId("face-grin-squint-tears"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceGrinSquintTears = 0xf586,
     /// <summary>
     /// 	Font Awesome icon for Face Grin Stars
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-grin-stars" />
-    [Description("Face Grin Stars"), IconId("face-grin-stars"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Grin Stars"), IconId("face-grin-stars"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceGrinStars = 0xf587,
     /// <summary>
     /// 	Font Awesome icon for Face Grin Tears
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-grin-tears" />
-    [Description("Face Grin Tears"), IconId("face-grin-tears"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Grin Tears"), IconId("face-grin-tears"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceGrinTears = 0xf588,
     /// <summary>
     /// 	Font Awesome icon for Face Grin Tongue
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-grin-tongue" />
-    [Description("Face Grin Tongue"), IconId("face-grin-tongue"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Grin Tongue"), IconId("face-grin-tongue"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceGrinTongue = 0xf589,
     /// <summary>
     /// 	Font Awesome icon for Face Grin Tongue Squint
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-grin-tongue-squint" />
-    [Description("Face Grin Tongue Squint"), IconId("face-grin-tongue-squint"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Grin Tongue Squint"), IconId("face-grin-tongue-squint"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceGrinTongueSquint = 0xf58a,
     /// <summary>
     /// 	Font Awesome icon for Face Grin Tongue Wink
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-grin-tongue-wink" />
-    [Description("Face Grin Tongue Wink"), IconId("face-grin-tongue-wink"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Grin Tongue Wink"), IconId("face-grin-tongue-wink"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceGrinTongueWink = 0xf58b,
     /// <summary>
     /// 	Font Awesome icon for Face Grin Wide
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-grin-wide" />
-    [Description("Face Grin Wide"), IconId("face-grin-wide"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Grin Wide"), IconId("face-grin-wide"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceGrinWide = 0xf581,
     /// <summary>
     /// 	Font Awesome icon for Face Grin Wink
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-grin-wink" />
-    [Description("Face Grin Wink"), IconId("face-grin-wink"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Grin Wink"), IconId("face-grin-wink"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceGrinWink = 0xf58c,
     /// <summary>
     /// 	Font Awesome icon for Face Kiss
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-kiss" />
-    [Description("Face Kiss"), IconId("face-kiss"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Kiss"), IconId("face-kiss"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceKiss = 0xf596,
     /// <summary>
     /// 	Font Awesome icon for Face Kiss Beam
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-kiss-beam" />
-    [Description("Face Kiss Beam"), IconId("face-kiss-beam"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Kiss Beam"), IconId("face-kiss-beam"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceKissBeam = 0xf597,
     /// <summary>
     /// 	Font Awesome icon for Face Kiss Wink Heart
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-kiss-wink-heart" />
-    [Description("Face Kiss Wink Heart"), IconId("face-kiss-wink-heart"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Kiss Wink Heart"), IconId("face-kiss-wink-heart"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceKissWinkHeart = 0xf598,
     /// <summary>
     /// 	Font Awesome icon for Face Laugh
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-laugh" />
-    [Description("Face Laugh"), IconId("face-laugh"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Laugh"), IconId("face-laugh"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceLaugh = 0xf599,
     /// <summary>
     /// 	Font Awesome icon for Face Laugh Beam
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-laugh-beam" />
-    [Description("Face Laugh Beam"), IconId("face-laugh-beam"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Laugh Beam"), IconId("face-laugh-beam"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceLaughBeam = 0xf59a,
     /// <summary>
     /// 	Font Awesome icon for Face Laugh Squint
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-laugh-squint" />
-    [Description("Face Laugh Squint"), IconId("face-laugh-squint"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Laugh Squint"), IconId("face-laugh-squint"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceLaughSquint = 0xf59b,
     /// <summary>
     /// 	Font Awesome icon for Face Laugh Wink
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-laugh-wink" />
-    [Description("Face Laugh Wink"), IconId("face-laugh-wink"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Laugh Wink"), IconId("face-laugh-wink"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceLaughWink = 0xf59c,
     /// <summary>
     /// 	Font Awesome icon for Face Meh
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-meh" />
-    [Description("Face Meh"), IconId("face-meh"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Meh"), IconId("face-meh"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceMeh = 0xf11a,
     /// <summary>
     /// 	Font Awesome icon for Face Meh Blank
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-meh-blank" />
-    [Description("Face Meh Blank"), IconId("face-meh-blank"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Meh Blank"), IconId("face-meh-blank"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceMehBlank = 0xf5a4,
     /// <summary>
     /// 	Font Awesome icon for Face Rolling Eyes
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-rolling-eyes" />
-    [Description("Face Rolling Eyes"), IconId("face-rolling-eyes"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Rolling Eyes"), IconId("face-rolling-eyes"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceRollingEyes = 0xf5a5,
     /// <summary>
     /// 	Font Awesome icon for Face Sad Cry
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-sad-cry" />
-    [Description("Face Sad Cry"), IconId("face-sad-cry"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Sad Cry"), IconId("face-sad-cry"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceSadCry = 0xf5b3,
     /// <summary>
     /// 	Font Awesome icon for Face Sad Tear
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-sad-tear" />
-    [Description("Face Sad Tear"), IconId("face-sad-tear"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Sad Tear"), IconId("face-sad-tear"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceSadTear = 0xf5b4,
     /// <summary>
     /// 	Font Awesome icon for Face Smile
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-smile" />
-    [Description("Face Smile"), IconId("face-smile"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Smile"), IconId("face-smile"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceSmile = 0xf118,
     /// <summary>
     /// 	Font Awesome icon for Face Smile Beam
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-smile-beam" />
-    [Description("Face Smile Beam"), IconId("face-smile-beam"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Smile Beam"), IconId("face-smile-beam"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceSmileBeam = 0xf5b8,
     /// <summary>
     /// 	Font Awesome icon for Face Smile Wink
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-smile-wink" />
-    [Description("Face Smile Wink"), IconId("face-smile-wink"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Smile Wink"), IconId("face-smile-wink"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceSmileWink = 0xf4da,
     /// <summary>
     /// 	Font Awesome icon for Face Surprise
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-surprise" />
-    [Description("Face Surprise"), IconId("face-surprise"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Surprise"), IconId("face-surprise"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceSurprise = 0xf5c2,
     /// <summary>
     /// 	Font Awesome icon for Face Tired
     /// </summary>
     /// <see href="http://fontawesome.io/icon/face-tired" />
-    [Description("Face Tired"), IconId("face-tired"), IconStyle("FontAwesomeSolid")]
+    [Description("Face Tired"), IconId("face-tired"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FaceTired = 0xf5c8,
     /// <summary>
     /// 	Font Awesome icon for Facebook
@@ -3877,7 +3877,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for File
     /// </summary>
     /// <see href="http://fontawesome.io/icon/file" />
-    [Description("File"), IconId("file"), IconStyle("FontAwesomeSolid")]
+    [Description("File"), IconId("file"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     File = 0xf15b,
     /// <summary>
     /// 	Font Awesome icon for File Arrow Down
@@ -3895,7 +3895,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for File Audio
     /// </summary>
     /// <see href="http://fontawesome.io/icon/file-audio" />
-    [Description("File Audio"), IconId("file-audio"), IconStyle("FontAwesomeSolid")]
+    [Description("File Audio"), IconId("file-audio"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FileAudio = 0xf1c7,
     /// <summary>
     /// 	Font Awesome icon for File Circle Check
@@ -3937,7 +3937,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for File Code
     /// </summary>
     /// <see href="http://fontawesome.io/icon/file-code" />
-    [Description("File Code"), IconId("file-code"), IconStyle("FontAwesomeSolid")]
+    [Description("File Code"), IconId("file-code"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FileCode = 0xf1c9,
     /// <summary>
     /// 	Font Awesome icon for File Contract
@@ -3955,7 +3955,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for File Excel
     /// </summary>
     /// <see href="http://fontawesome.io/icon/file-excel" />
-    [Description("File Excel"), IconId("file-excel"), IconStyle("FontAwesomeSolid")]
+    [Description("File Excel"), IconId("file-excel"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FileExcel = 0xf1c3,
     /// <summary>
     /// 	Font Awesome icon for File Export
@@ -3967,7 +3967,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for File Image
     /// </summary>
     /// <see href="http://fontawesome.io/icon/file-image" />
-    [Description("File Image"), IconId("file-image"), IconStyle("FontAwesomeSolid")]
+    [Description("File Image"), IconId("file-image"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FileImage = 0xf1c5,
     /// <summary>
     /// 	Font Awesome icon for File Import
@@ -3991,7 +3991,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for File Lines
     /// </summary>
     /// <see href="http://fontawesome.io/icon/file-lines" />
-    [Description("File Lines"), IconId("file-lines"), IconStyle("FontAwesomeSolid")]
+    [Description("File Lines"), IconId("file-lines"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FileLines = 0xf15c,
     /// <summary>
     /// 	Font Awesome icon for File Medical
@@ -4003,7 +4003,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for File Pdf
     /// </summary>
     /// <see href="http://fontawesome.io/icon/file-pdf" />
-    [Description("File Pdf"), IconId("file-pdf"), IconStyle("FontAwesomeSolid")]
+    [Description("File Pdf"), IconId("file-pdf"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FilePdf = 0xf1c1,
     /// <summary>
     /// 	Font Awesome icon for File Pen
@@ -4015,7 +4015,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for File Powerpoint
     /// </summary>
     /// <see href="http://fontawesome.io/icon/file-powerpoint" />
-    [Description("File Powerpoint"), IconId("file-powerpoint"), IconStyle("FontAwesomeSolid")]
+    [Description("File Powerpoint"), IconId("file-powerpoint"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FilePowerpoint = 0xf1c4,
     /// <summary>
     /// 	Font Awesome icon for File Prescription
@@ -4039,7 +4039,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for File Video
     /// </summary>
     /// <see href="http://fontawesome.io/icon/file-video" />
-    [Description("File Video"), IconId("file-video"), IconStyle("FontAwesomeSolid")]
+    [Description("File Video"), IconId("file-video"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FileVideo = 0xf1c8,
     /// <summary>
     /// 	Font Awesome icon for File Waveform
@@ -4051,13 +4051,13 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for File Word
     /// </summary>
     /// <see href="http://fontawesome.io/icon/file-word" />
-    [Description("File Word"), IconId("file-word"), IconStyle("FontAwesomeSolid")]
+    [Description("File Word"), IconId("file-word"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FileWord = 0xf1c2,
     /// <summary>
     /// 	Font Awesome icon for File Zipper
     /// </summary>
     /// <see href="http://fontawesome.io/icon/file-zipper" />
-    [Description("File Zipper"), IconId("file-zipper"), IconStyle("FontAwesomeSolid")]
+    [Description("File Zipper"), IconId("file-zipper"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FileZipper = 0xf1c6,
     /// <summary>
     /// 	Font Awesome icon for Fill
@@ -4177,7 +4177,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Flag
     /// </summary>
     /// <see href="http://fontawesome.io/icon/flag" />
-    [Description("Flag"), IconId("flag"), IconStyle("FontAwesomeSolid")]
+    [Description("Flag"), IconId("flag"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Flag = 0xf024,
     /// <summary>
     /// 	Font Awesome icon for Flag Checkered
@@ -4219,7 +4219,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Floppy Disk
     /// </summary>
     /// <see href="http://fontawesome.io/icon/floppy-disk" />
-    [Description("Floppy Disk"), IconId("floppy-disk"), IconStyle("FontAwesomeSolid")]
+    [Description("Floppy Disk"), IconId("floppy-disk"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FloppyDisk = 0xf0c7,
     /// <summary>
     /// 	Font Awesome icon for Florin Sign
@@ -4237,13 +4237,13 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Folder
     /// </summary>
     /// <see href="http://fontawesome.io/icon/folder" />
-    [Description("Folder"), IconId("folder"), IconStyle("FontAwesomeSolid")]
+    [Description("Folder"), IconId("folder"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Folder = 0xf07b,
     /// <summary>
     /// 	Font Awesome icon for Folder Closed
     /// </summary>
     /// <see href="http://fontawesome.io/icon/folder-closed" />
-    [Description("Folder Closed"), IconId("folder-closed"), IconStyle("FontAwesomeSolid")]
+    [Description("Folder Closed"), IconId("folder-closed"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FolderClosed = 0xe185,
     /// <summary>
     /// 	Font Awesome icon for Folder Minus
@@ -4255,7 +4255,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Folder Open
     /// </summary>
     /// <see href="http://fontawesome.io/icon/folder-open" />
-    [Description("Folder Open"), IconId("folder-open"), IconStyle("FontAwesomeSolid")]
+    [Description("Folder Open"), IconId("folder-open"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     FolderOpen = 0xf07c,
     /// <summary>
     /// 	Font Awesome icon for Folder Plus
@@ -4279,7 +4279,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Font Awesome
     /// </summary>
     /// <see href="http://fontawesome.io/icon/font-awesome" />
-    [Description("Font Awesome"), IconId("font-awesome"), IconStyle("FontAwesomeSolid")]
+    [Description("Font Awesome"), IconId("font-awesome"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular"), IconStyle("FontAwesomeBrands")]
     FontAwesome = 0xf2b4,
     /// <summary>
     /// 	Font Awesome icon for Fonticons
@@ -4375,7 +4375,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Futbol
     /// </summary>
     /// <see href="http://fontawesome.io/icon/futbol" />
-    [Description("Futbol"), IconId("futbol"), IconStyle("FontAwesomeSolid")]
+    [Description("Futbol"), IconId("futbol"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Futbol = 0xf1e3,
     /// <summary>
     /// 	Font Awesome icon for G
@@ -4453,7 +4453,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Gem
     /// </summary>
     /// <see href="http://fontawesome.io/icon/gem" />
-    [Description("Gem"), IconId("gem"), IconStyle("FontAwesomeSolid")]
+    [Description("Gem"), IconId("gem"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Gem = 0xf3a5,
     /// <summary>
     /// 	Font Awesome icon for Genderless
@@ -4795,13 +4795,13 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Hand
     /// </summary>
     /// <see href="http://fontawesome.io/icon/hand" />
-    [Description("Hand"), IconId("hand"), IconStyle("FontAwesomeSolid")]
+    [Description("Hand"), IconId("hand"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Hand = 0xf256,
     /// <summary>
     /// 	Font Awesome icon for Hand Back Fist
     /// </summary>
     /// <see href="http://fontawesome.io/icon/hand-back-fist" />
-    [Description("Hand Back Fist"), IconId("hand-back-fist"), IconStyle("FontAwesomeSolid")]
+    [Description("Hand Back Fist"), IconId("hand-back-fist"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     HandBackFist = 0xf255,
     /// <summary>
     /// 	Font Awesome icon for Hand Dots
@@ -4855,7 +4855,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Hand Lizard
     /// </summary>
     /// <see href="http://fontawesome.io/icon/hand-lizard" />
-    [Description("Hand Lizard"), IconId("hand-lizard"), IconStyle("FontAwesomeSolid")]
+    [Description("Hand Lizard"), IconId("hand-lizard"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     HandLizard = 0xf258,
     /// <summary>
     /// 	Font Awesome icon for Hand Middle Finger
@@ -4867,43 +4867,43 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Hand Peace
     /// </summary>
     /// <see href="http://fontawesome.io/icon/hand-peace" />
-    [Description("Hand Peace"), IconId("hand-peace"), IconStyle("FontAwesomeSolid")]
+    [Description("Hand Peace"), IconId("hand-peace"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     HandPeace = 0xf25b,
     /// <summary>
     /// 	Font Awesome icon for Hand Point Down
     /// </summary>
     /// <see href="http://fontawesome.io/icon/hand-point-down" />
-    [Description("Hand Point Down"), IconId("hand-point-down"), IconStyle("FontAwesomeSolid")]
+    [Description("Hand Point Down"), IconId("hand-point-down"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     HandPointDown = 0xf0a7,
     /// <summary>
     /// 	Font Awesome icon for Hand Point Left
     /// </summary>
     /// <see href="http://fontawesome.io/icon/hand-point-left" />
-    [Description("Hand Point Left"), IconId("hand-point-left"), IconStyle("FontAwesomeSolid")]
+    [Description("Hand Point Left"), IconId("hand-point-left"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     HandPointLeft = 0xf0a5,
     /// <summary>
     /// 	Font Awesome icon for Hand Point Right
     /// </summary>
     /// <see href="http://fontawesome.io/icon/hand-point-right" />
-    [Description("Hand Point Right"), IconId("hand-point-right"), IconStyle("FontAwesomeSolid")]
+    [Description("Hand Point Right"), IconId("hand-point-right"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     HandPointRight = 0xf0a4,
     /// <summary>
     /// 	Font Awesome icon for Hand Point Up
     /// </summary>
     /// <see href="http://fontawesome.io/icon/hand-point-up" />
-    [Description("Hand Point Up"), IconId("hand-point-up"), IconStyle("FontAwesomeSolid")]
+    [Description("Hand Point Up"), IconId("hand-point-up"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     HandPointUp = 0xf0a6,
     /// <summary>
     /// 	Font Awesome icon for Hand Pointer
     /// </summary>
     /// <see href="http://fontawesome.io/icon/hand-pointer" />
-    [Description("Hand Pointer"), IconId("hand-pointer"), IconStyle("FontAwesomeSolid")]
+    [Description("Hand Pointer"), IconId("hand-pointer"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     HandPointer = 0xf25a,
     /// <summary>
     /// 	Font Awesome icon for Hand Scissors
     /// </summary>
     /// <see href="http://fontawesome.io/icon/hand-scissors" />
-    [Description("Hand Scissors"), IconId("hand-scissors"), IconStyle("FontAwesomeSolid")]
+    [Description("Hand Scissors"), IconId("hand-scissors"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     HandScissors = 0xf257,
     /// <summary>
     /// 	Font Awesome icon for Hand Sparkles
@@ -4915,7 +4915,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Hand Spock
     /// </summary>
     /// <see href="http://fontawesome.io/icon/hand-spock" />
-    [Description("Hand Spock"), IconId("hand-spock"), IconStyle("FontAwesomeSolid")]
+    [Description("Hand Spock"), IconId("hand-spock"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     HandSpock = 0xf259,
     /// <summary>
     /// 	Font Awesome icon for Handcuffs
@@ -4981,7 +4981,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Handshake
     /// </summary>
     /// <see href="http://fontawesome.io/icon/handshake" />
-    [Description("Handshake"), IconId("handshake"), IconStyle("FontAwesomeSolid")]
+    [Description("Handshake"), IconId("handshake"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Handshake = 0xf2b5,
     /// <summary>
     /// 	Font Awesome icon for Handshake Angle
@@ -5017,7 +5017,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Hard Drive
     /// </summary>
     /// <see href="http://fontawesome.io/icon/hard-drive" />
-    [Description("Hard Drive"), IconId("hard-drive"), IconStyle("FontAwesomeSolid")]
+    [Description("Hard Drive"), IconId("hard-drive"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     HardDrive = 0xf0a0,
     /// <summary>
     /// 	Font Awesome icon for Hashnode
@@ -5101,7 +5101,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Heart
     /// </summary>
     /// <see href="http://fontawesome.io/icon/heart" />
-    [Description("Heart"), IconId("heart"), IconStyle("FontAwesomeSolid")]
+    [Description("Heart"), IconId("heart"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Heart = 0xf004,
     /// <summary>
     /// 	Font Awesome icon for Heart Circle Bolt
@@ -5257,7 +5257,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Hospital
     /// </summary>
     /// <see href="http://fontawesome.io/icon/hospital" />
-    [Description("Hospital"), IconId("hospital"), IconStyle("FontAwesomeSolid")]
+    [Description("Hospital"), IconId("hospital"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Hospital = 0xf0f8,
     /// <summary>
     /// 	Font Awesome icon for Hospital User
@@ -5293,7 +5293,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Hourglass
     /// </summary>
     /// <see href="http://fontawesome.io/icon/hourglass" />
-    [Description("Hourglass"), IconId("hourglass"), IconStyle("FontAwesomeSolid")]
+    [Description("Hourglass"), IconId("hourglass"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Hourglass = 0xf254,
     /// <summary>
     /// 	Font Awesome icon for Hourglass End
@@ -5305,7 +5305,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Hourglass Half
     /// </summary>
     /// <see href="http://fontawesome.io/icon/hourglass-half" />
-    [Description("Hourglass Half"), IconId("hourglass-half"), IconStyle("FontAwesomeSolid")]
+    [Description("Hourglass Half"), IconId("hourglass-half"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     HourglassHalf = 0xf252,
     /// <summary>
     /// 	Font Awesome icon for Hourglass Start
@@ -5521,13 +5521,13 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Id Badge
     /// </summary>
     /// <see href="http://fontawesome.io/icon/id-badge" />
-    [Description("Id Badge"), IconId("id-badge"), IconStyle("FontAwesomeSolid")]
+    [Description("Id Badge"), IconId("id-badge"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     IdBadge = 0xf2c1,
     /// <summary>
     /// 	Font Awesome icon for Id Card
     /// </summary>
     /// <see href="http://fontawesome.io/icon/id-card" />
-    [Description("Id Card"), IconId("id-card"), IconStyle("FontAwesomeSolid")]
+    [Description("Id Card"), IconId("id-card"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     IdCard = 0xf2c2,
     /// <summary>
     /// 	Font Awesome icon for Id Card Clip
@@ -5551,7 +5551,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Image
     /// </summary>
     /// <see href="http://fontawesome.io/icon/image" />
-    [Description("Image"), IconId("image"), IconStyle("FontAwesomeSolid")]
+    [Description("Image"), IconId("image"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Image = 0xf03e,
     /// <summary>
     /// 	Font Awesome icon for Image Portrait
@@ -5563,7 +5563,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Images
     /// </summary>
     /// <see href="http://fontawesome.io/icon/images" />
-    [Description("Images"), IconId("images"), IconStyle("FontAwesomeSolid")]
+    [Description("Images"), IconId("images"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Images = 0xf302,
     /// <summary>
     /// 	Font Awesome icon for IMDB
@@ -5803,7 +5803,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Keyboard
     /// </summary>
     /// <see href="http://fontawesome.io/icon/keyboard" />
-    [Description("Keyboard"), IconId("keyboard"), IconStyle("FontAwesomeSolid")]
+    [Description("Keyboard"), IconId("keyboard"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Keyboard = 0xf11c,
     /// <summary>
     /// 	Font Awesome icon for KeyCDN
@@ -5971,7 +5971,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Lemon
     /// </summary>
     /// <see href="http://fontawesome.io/icon/lemon" />
-    [Description("Lemon"), IconId("lemon"), IconStyle("FontAwesomeSolid")]
+    [Description("Lemon"), IconId("lemon"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Lemon = 0xf094,
     /// <summary>
     /// 	Font Awesome icon for Less
@@ -6001,13 +6001,13 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Life Ring
     /// </summary>
     /// <see href="http://fontawesome.io/icon/life-ring" />
-    [Description("Life Ring"), IconId("life-ring"), IconStyle("FontAwesomeSolid")]
+    [Description("Life Ring"), IconId("life-ring"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     LifeRing = 0xf1cd,
     /// <summary>
     /// 	Font Awesome icon for Lightbulb
     /// </summary>
     /// <see href="http://fontawesome.io/icon/lightbulb" />
-    [Description("Lightbulb"), IconId("lightbulb"), IconStyle("FontAwesomeSolid")]
+    [Description("Lightbulb"), IconId("lightbulb"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Lightbulb = 0xf0eb,
     /// <summary>
     /// 	Font Awesome icon for Line
@@ -6241,7 +6241,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Map
     /// </summary>
     /// <see href="http://fontawesome.io/icon/map" />
-    [Description("Map"), IconId("map"), IconStyle("FontAwesomeSolid")]
+    [Description("Map"), IconId("map"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Map = 0xf279,
     /// <summary>
     /// 	Font Awesome icon for Map Location
@@ -6451,7 +6451,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Message
     /// </summary>
     /// <see href="http://fontawesome.io/icon/message" />
-    [Description("Message"), IconId("message"), IconStyle("FontAwesomeSolid")]
+    [Description("Message"), IconId("message"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Message = 0xf27a,
     /// <summary>
     /// 	Font Awesome icon for Meta
@@ -6619,7 +6619,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Money Bill 1
     /// </summary>
     /// <see href="http://fontawesome.io/icon/money-bill-1" />
-    [Description("Money Bill 1"), IconId("money-bill-1"), IconStyle("FontAwesomeSolid")]
+    [Description("Money Bill 1"), IconId("money-bill-1"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     MoneyBill1 = 0xf3d1,
     /// <summary>
     /// 	Font Awesome icon for Money Bill 1 Wave
@@ -6679,7 +6679,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Moon
     /// </summary>
     /// <see href="http://fontawesome.io/icon/moon" />
-    [Description("Moon"), IconId("moon"), IconStyle("FontAwesomeSolid")]
+    [Description("Moon"), IconId("moon"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Moon = 0xf186,
     /// <summary>
     /// 	Font Awesome icon for Mortar Pestle
@@ -6793,7 +6793,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Newspaper
     /// </summary>
     /// <see href="http://fontawesome.io/icon/newspaper" />
-    [Description("Newspaper"), IconId("newspaper"), IconStyle("FontAwesomeSolid")]
+    [Description("Newspaper"), IconId("newspaper"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Newspaper = 0xf1ea,
     /// <summary>
     /// 	Font Awesome icon for NFC Directional
@@ -6841,7 +6841,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Note Sticky
     /// </summary>
     /// <see href="http://fontawesome.io/icon/note-sticky" />
-    [Description("Note Sticky"), IconId("note-sticky"), IconStyle("FontAwesomeSolid")]
+    [Description("Note Sticky"), IconId("note-sticky"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     NoteSticky = 0xf249,
     /// <summary>
     /// 	Font Awesome icon for Notes Medical
@@ -6877,13 +6877,13 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Object Group
     /// </summary>
     /// <see href="http://fontawesome.io/icon/object-group" />
-    [Description("Object Group"), IconId("object-group"), IconStyle("FontAwesomeSolid")]
+    [Description("Object Group"), IconId("object-group"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     ObjectGroup = 0xf247,
     /// <summary>
     /// 	Font Awesome icon for Object Ungroup
     /// </summary>
     /// <see href="http://fontawesome.io/icon/object-ungroup" />
-    [Description("Object Ungroup"), IconId("object-ungroup"), IconStyle("FontAwesomeSolid")]
+    [Description("Object Ungroup"), IconId("object-ungroup"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     ObjectUngroup = 0xf248,
     /// <summary>
     /// 	Font Awesome icon for Octopus Deploy
@@ -7051,7 +7051,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Paper Plane
     /// </summary>
     /// <see href="http://fontawesome.io/icon/paper-plane" />
-    [Description("Paper Plane"), IconId("paper-plane"), IconStyle("FontAwesomeSolid")]
+    [Description("Paper Plane"), IconId("paper-plane"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     PaperPlane = 0xf1d8,
     /// <summary>
     /// 	Font Awesome icon for Paperclip
@@ -7081,7 +7081,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Paste
     /// </summary>
     /// <see href="http://fontawesome.io/icon/paste" />
-    [Description("Paste"), IconId("paste"), IconStyle("FontAwesomeSolid")]
+    [Description("Paste"), IconId("paste"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Paste = 0xf0ea,
     /// <summary>
     /// 	Font Awesome icon for Patreon
@@ -7147,7 +7147,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Pen To Square
     /// </summary>
     /// <see href="http://fontawesome.io/icon/pen-to-square" />
-    [Description("Pen To Square"), IconId("pen-to-square"), IconStyle("FontAwesomeSolid")]
+    [Description("Pen To Square"), IconId("pen-to-square"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     PenToSquare = 0xf044,
     /// <summary>
     /// 	Font Awesome icon for Pencil
@@ -7999,13 +7999,13 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Rectangle List
     /// </summary>
     /// <see href="http://fontawesome.io/icon/rectangle-list" />
-    [Description("Rectangle List"), IconId("rectangle-list"), IconStyle("FontAwesomeSolid")]
+    [Description("Rectangle List"), IconId("rectangle-list"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     RectangleList = 0xf022,
     /// <summary>
     /// 	Font Awesome icon for Rectangle Xmark
     /// </summary>
     /// <see href="http://fontawesome.io/icon/rectangle-xmark" />
-    [Description("Rectangle Xmark"), IconId("rectangle-xmark"), IconStyle("FontAwesomeSolid")]
+    [Description("Rectangle Xmark"), IconId("rectangle-xmark"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     RectangleXmark = 0xf410,
     /// <summary>
     /// 	Font Awesome icon for Recycle
@@ -8041,7 +8041,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Registered
     /// </summary>
     /// <see href="http://fontawesome.io/icon/registered" />
-    [Description("Registered"), IconId("registered"), IconStyle("FontAwesomeSolid")]
+    [Description("Registered"), IconId("registered"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Registered = 0xf25d,
     /// <summary>
     /// 	Font Awesome icon for Renren
@@ -8521,7 +8521,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Share From Square
     /// </summary>
     /// <see href="http://fontawesome.io/icon/share-from-square" />
-    [Description("Share From Square"), IconId("share-from-square"), IconStyle("FontAwesomeSolid")]
+    [Description("Share From Square"), IconId("share-from-square"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     ShareFromSquare = 0xf14d,
     /// <summary>
     /// 	Font Awesome icon for Share Nodes
@@ -8815,7 +8815,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Snowflake
     /// </summary>
     /// <see href="http://fontawesome.io/icon/snowflake" />
-    [Description("Snowflake"), IconId("snowflake"), IconStyle("FontAwesomeSolid")]
+    [Description("Snowflake"), IconId("snowflake"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Snowflake = 0xf2dc,
     /// <summary>
     /// 	Font Awesome icon for Snowman
@@ -8959,7 +8959,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Square
     /// </summary>
     /// <see href="http://fontawesome.io/icon/square" />
-    [Description("Square"), IconId("square"), IconStyle("FontAwesomeSolid")]
+    [Description("Square"), IconId("square"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Square = 0xf0c8,
     /// <summary>
     /// 	Font Awesome icon for Square Arrow Up Right
@@ -8977,31 +8977,31 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Square Caret Down
     /// </summary>
     /// <see href="http://fontawesome.io/icon/square-caret-down" />
-    [Description("Square Caret Down"), IconId("square-caret-down"), IconStyle("FontAwesomeSolid")]
+    [Description("Square Caret Down"), IconId("square-caret-down"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     SquareCaretDown = 0xf150,
     /// <summary>
     /// 	Font Awesome icon for Square Caret Left
     /// </summary>
     /// <see href="http://fontawesome.io/icon/square-caret-left" />
-    [Description("Square Caret Left"), IconId("square-caret-left"), IconStyle("FontAwesomeSolid")]
+    [Description("Square Caret Left"), IconId("square-caret-left"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     SquareCaretLeft = 0xf191,
     /// <summary>
     /// 	Font Awesome icon for Square Caret Right
     /// </summary>
     /// <see href="http://fontawesome.io/icon/square-caret-right" />
-    [Description("Square Caret Right"), IconId("square-caret-right"), IconStyle("FontAwesomeSolid")]
+    [Description("Square Caret Right"), IconId("square-caret-right"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     SquareCaretRight = 0xf152,
     /// <summary>
     /// 	Font Awesome icon for Square Caret Up
     /// </summary>
     /// <see href="http://fontawesome.io/icon/square-caret-up" />
-    [Description("Square Caret Up"), IconId("square-caret-up"), IconStyle("FontAwesomeSolid")]
+    [Description("Square Caret Up"), IconId("square-caret-up"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     SquareCaretUp = 0xf151,
     /// <summary>
     /// 	Font Awesome icon for Square Check
     /// </summary>
     /// <see href="http://fontawesome.io/icon/square-check" />
-    [Description("Square Check"), IconId("square-check"), IconStyle("FontAwesomeSolid")]
+    [Description("Square Check"), IconId("square-check"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     SquareCheck = 0xf14a,
     /// <summary>
     /// 	Font Awesome icon for Square Dribbble
@@ -9037,7 +9037,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Square Full
     /// </summary>
     /// <see href="http://fontawesome.io/icon/square-full" />
-    [Description("Square Full"), IconId("square-full"), IconStyle("FontAwesomeSolid")]
+    [Description("Square Full"), IconId("square-full"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     SquareFull = 0xf45c,
     /// <summary>
     /// 	Font Awesome icon for Square Git
@@ -9103,7 +9103,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Square Minus
     /// </summary>
     /// <see href="http://fontawesome.io/icon/square-minus" />
-    [Description("Square Minus"), IconId("square-minus"), IconStyle("FontAwesomeSolid")]
+    [Description("Square Minus"), IconId("square-minus"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     SquareMinus = 0xf146,
     /// <summary>
     /// 	Font Awesome icon for Square Nfi
@@ -9163,7 +9163,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Square Plus
     /// </summary>
     /// <see href="http://fontawesome.io/icon/square-plus" />
-    [Description("Square Plus"), IconId("square-plus"), IconStyle("FontAwesomeSolid")]
+    [Description("Square Plus"), IconId("square-plus"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     SquarePlus = 0xf0fe,
     /// <summary>
     /// 	Font Awesome icon for Square Poll Horizontal
@@ -9355,7 +9355,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Star
     /// </summary>
     /// <see href="http://fontawesome.io/icon/star" />
-    [Description("Star"), IconId("star"), IconStyle("FontAwesomeSolid")]
+    [Description("Star"), IconId("star"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Star = 0xf005,
     /// <summary>
     /// 	Font Awesome icon for Star And Crescent
@@ -9367,13 +9367,13 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Star Half
     /// </summary>
     /// <see href="http://fontawesome.io/icon/star-half" />
-    [Description("Star Half"), IconId("star-half"), IconStyle("FontAwesomeSolid")]
+    [Description("Star Half"), IconId("star-half"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     StarHalf = 0xf089,
     /// <summary>
     /// 	Font Awesome icon for Star Half Stroke
     /// </summary>
     /// <see href="http://fontawesome.io/icon/star-half-stroke" />
-    [Description("Star Half Stroke"), IconId("star-half-stroke"), IconStyle("FontAwesomeSolid")]
+    [Description("Star Half Stroke"), IconId("star-half-stroke"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     StarHalfStroke = 0xf5c0,
     /// <summary>
     /// 	Font Awesome icon for Star Of David
@@ -9541,7 +9541,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Sun
     /// </summary>
     /// <see href="http://fontawesome.io/icon/sun" />
-    [Description("Sun"), IconId("sun"), IconStyle("FontAwesomeSolid")]
+    [Description("Sun"), IconId("sun"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     Sun = 0xf185,
     /// <summary>
     /// 	Font Awesome icon for Sun Plant Wilt
@@ -9913,13 +9913,13 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Thumbs Down
     /// </summary>
     /// <see href="http://fontawesome.io/icon/thumbs-down" />
-    [Description("Thumbs Down"), IconId("thumbs-down"), IconStyle("FontAwesomeSolid")]
+    [Description("Thumbs Down"), IconId("thumbs-down"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     ThumbsDown = 0xf165,
     /// <summary>
     /// 	Font Awesome icon for Thumbs Up
     /// </summary>
     /// <see href="http://fontawesome.io/icon/thumbs-up" />
-    [Description("Thumbs Up"), IconId("thumbs-up"), IconStyle("FontAwesomeSolid")]
+    [Description("Thumbs Up"), IconId("thumbs-up"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     ThumbsUp = 0xf164,
     /// <summary>
     /// 	Font Awesome icon for Thumbtack
@@ -10105,7 +10105,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Trash Can
     /// </summary>
     /// <see href="http://fontawesome.io/icon/trash-can" />
-    [Description("Trash Can"), IconId("trash-can"), IconStyle("FontAwesomeSolid")]
+    [Description("Trash Can"), IconId("trash-can"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     TrashCan = 0xf2ed,
     /// <summary>
     /// 	Font Awesome icon for Trash Can Arrow Up
@@ -10441,7 +10441,7 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for User
     /// </summary>
     /// <see href="http://fontawesome.io/icon/user" />
-    [Description("User"), IconId("user"), IconStyle("FontAwesomeSolid")]
+    [Description("User"), IconId("user"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     User = 0xf007,
     /// <summary>
     /// 	Font Awesome icon for User Astronaut
@@ -11053,19 +11053,19 @@ public enum FontAwesomeIcon
     /// 	Font Awesome icon for Window Maximize
     /// </summary>
     /// <see href="http://fontawesome.io/icon/window-maximize" />
-    [Description("Window Maximize"), IconId("window-maximize"), IconStyle("FontAwesomeSolid")]
+    [Description("Window Maximize"), IconId("window-maximize"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     WindowMaximize = 0xf2d0,
     /// <summary>
     /// 	Font Awesome icon for Window Minimize
     /// </summary>
     /// <see href="http://fontawesome.io/icon/window-minimize" />
-    [Description("Window Minimize"), IconId("window-minimize"), IconStyle("FontAwesomeSolid")]
+    [Description("Window Minimize"), IconId("window-minimize"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     WindowMinimize = 0xf2d1,
     /// <summary>
     /// 	Font Awesome icon for Window Restore
     /// </summary>
     /// <see href="http://fontawesome.io/icon/window-restore" />
-    [Description("Window Restore"), IconId("window-restore"), IconStyle("FontAwesomeSolid")]
+    [Description("Window Restore"), IconId("window-restore"), IconStyle("FontAwesomeSolid"), IconStyle("FontAwesomeRegular")]
     WindowRestore = 0xf2d2,
     /// <summary>
     /// 	Font Awesome icon for Windows

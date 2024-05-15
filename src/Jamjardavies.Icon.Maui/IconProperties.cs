@@ -14,7 +14,7 @@ public static class IconProperties
     /// </summary>
     public static readonly BindableProperty IconProperty = BindableProperty.Create(
         "Icon",
-        typeof(Enum),
+        typeof(Icon),
         typeof(IIcon),
         propertyChanged: OnIconChanged);
 
@@ -79,6 +79,16 @@ public static class IconProperties
     #region Private
 
     private static void OnIconChanged(BindableObject bindable, object oldValue, object newValue)
+    {
+        if (bindable is not IIcon icon)
+        {
+            return;
+        }
+
+        icon.UpdateIcon();
+    }
+
+    private static void OnIconStylePropertyChanged(BindableObject bindable, object oldValue, object newValue)
     {
         if (bindable is not IIcon icon)
         {

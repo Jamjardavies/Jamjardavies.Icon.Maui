@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Jamjardavies.Icons.Generator": {
+      "commandName": "Project",
+      "commandLineArgs": "Material MaterialSymbolsOutlined.codepoints 4.0.0 Outlined"
+    }
+  }
+}

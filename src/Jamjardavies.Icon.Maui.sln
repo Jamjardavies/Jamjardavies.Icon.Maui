@@ -17,6 +17,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jamjardavies.Icon.Maui.Font
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jamjardavies.Icon.Maui.Material", "Jamjardavies.Icon.Maui.Material\Jamjardavies.Icon.Maui.Material.csproj", "{CEBC6CC2-7574-4678-9009-831DC8600271}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{7388B196-F6DE-43C3-8C2C-E68D768A948F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jamjardavies.Icons.Generator", "..\tools\Jamjardavies.Icons.Generator\Jamjardavies.Icons.Generator.csproj", "{EBE7B3F1-0EAD-486E-8C20-53D61A698D36}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +39,10 @@ Global
 		{CEBC6CC2-7574-4678-9009-831DC8600271}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEBC6CC2-7574-4678-9009-831DC8600271}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEBC6CC2-7574-4678-9009-831DC8600271}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBE7B3F1-0EAD-486E-8C20-53D61A698D36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBE7B3F1-0EAD-486E-8C20-53D61A698D36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBE7B3F1-0EAD-486E-8C20-53D61A698D36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBE7B3F1-0EAD-486E-8C20-53D61A698D36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +51,7 @@ Global
 		{D8411D3D-B6BB-4E59-9119-EE7CC534A7B4} = {DF396DA7-469D-4C9A-892F-048F2E9205E2}
 		{07E24828-ED99-48B5-B0D0-DDA735F45AE5} = {DF396DA7-469D-4C9A-892F-048F2E9205E2}
 		{CEBC6CC2-7574-4678-9009-831DC8600271} = {DF396DA7-469D-4C9A-892F-048F2E9205E2}
+		{EBE7B3F1-0EAD-486E-8C20-53D61A698D36} = {7388B196-F6DE-43C3-8C2C-E68D768A948F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D19D369E-AEFE-4AB4-AF7E-52C07D330036}

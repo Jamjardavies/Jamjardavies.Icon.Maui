@@ -10,7 +10,7 @@
 
     <PropertyGroup>
         <Title>Icons.Maui</Title>
-        <Version>1.0.7</Version>
+        <Version>1.1.0</Version>
         <AssemblyVersion>$(Version)</AssemblyVersion>
         <AssemblyFileVersion>$(Version)</AssemblyFileVersion>
         <Product>$(AssemblyName) ($(TargetFramework))</Product>

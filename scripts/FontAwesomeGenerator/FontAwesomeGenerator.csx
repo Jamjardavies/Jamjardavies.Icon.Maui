@@ -2,6 +2,7 @@
 
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading;
 using Newtonsoft.Json;
@@ -56,13 +57,13 @@ using (sb.Indent())
 	foreach (var kvp in jsonData)
 	{
 		string label = kvp.Value.Label;
-		string style = kvp.Value.Free.Contains("solid") ? "Solid" : ToTitleCase(kvp.Value.Free.First());
+		string styles = kvp.Value.Free.Select(s => $"IconStyle(\"FontAwesome{ToTitleCase(s)}\")");
 
 		sb.WriteLine("/// <summary>");
 		sb.WriteLine($"/// \tFont Awesome icon for {label}");
 		sb.WriteLine("/// </summary>");
 		sb.WriteLine($"/// <see href=\"http://fontawesome.io/icon/{kvp.Key}\" />");
-		sb.WriteLine($"[Description(\"{label}\"), IconId(\"{kvp.Key}\"), IconStyle(\"FontAwesome{style}\")]");
+		sb.WriteLine($"[Description(\"{label}\"), IconId(\"{kvp.Key}\"), {string.Join(", ", styles)}]");
 		sb.WriteLine($"{Safe(kvp.Key)} = 0x{kvp.Value.Unicode},");
 	}
 }

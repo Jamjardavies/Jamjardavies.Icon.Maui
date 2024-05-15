@@ -17,8 +17,8 @@ public static class MauiAppExtensions
             {
                 fonts.AddEmbeddedResourceFont(
                     typeof(MauiAppExtensions).Assembly,
-                    "MaterialIcons-Regular.ttf",
-                    "MaterialRegular");
+                    "MaterialSymbolsOutlined.ttf",
+                    MaterialExtension.OutlinedStyle);
             });
 
         return builder;

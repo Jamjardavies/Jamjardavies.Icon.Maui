@@ -35,9 +35,9 @@ public class IconLabel : Label, IIcon, ISpinnable
     ///     Gets or sets the FontAwesomeLabel icon.
     ///     Note: Changing this property will cause the icon to be redrawn.
     /// </summary>
-    public Enum? Icon
+    public Icon? Icon
     {
-        get => (Enum?)this.GetValue(IconProperty);
+        get => (Icon?)this.GetValue(IconProperty);
         set => this.SetValue(IconProperty, value);
     }
 
@@ -70,15 +70,15 @@ public class IconLabel : Label, IIcon, ISpinnable
     /// <inheritdoc />
     public void UpdateIcon()
     {
-        Enum? icon = this.Icon;
+        Icon? icon = this.Icon;
 
-        if (icon is null)
+        if (icon?.Glyph is null)
         {
             return;
         }
 
-        this.SetValue(FontFamilyProperty, icon.ToFontFamily());
-        this.SetValue(TextProperty, icon.ToIconGlyph());
+        this.SetValue(FontFamilyProperty, icon.Glyph.ToFontFamily(icon.Style));
+        this.SetValue(TextProperty, icon.Glyph.ToIconGlyph());
     }
 
     #endregion

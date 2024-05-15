@@ -7,7 +7,7 @@ namespace Jamjardavies.Icon.Maui;
 /// <summary>
 ///     Represents the Font Family the icon is in.
 /// </summary>
-[AttributeUsage(AttributeTargets.All, Inherited = false)]
+[AttributeUsage(AttributeTargets.All, Inherited = false, AllowMultiple = true)]
 public class IconStyleAttribute : Attribute
 {
     /// <summary>

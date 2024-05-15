@@ -24,9 +24,9 @@ public class IconButton : Button, IIcon
     ///     Gets or sets the FontAwesomeLabel icon.
     ///     Note: Changing this property will cause the icon to be redrawn.
     /// </summary>
-    public Enum? Icon
+    public Icon? Icon
     {
-        get => (Enum?)this.GetValue(IconProperty);
+        get => (Icon?)this.GetValue(IconProperty);
         set => this.SetValue(IconProperty, value);
     }
 
@@ -59,14 +59,14 @@ public class IconButton : Button, IIcon
     /// <inheritdoc />
     public void UpdateIcon()
     {
-        Enum? icon = this.Icon;
+        Icon? icon = this.Icon;
 
-        if (icon is null)
+        if (icon?.Glyph is null)
         {
             return;
         }
 
-        ImageSource? image = icon.ToIconSource(this.IconColor, this.IconSize);
+        ImageSource? image = icon.Glyph.ToIconSource(icon.Style, this.IconColor, this.IconSize);
 
         this.SetValue(ImageSourceProperty, image);
     }
