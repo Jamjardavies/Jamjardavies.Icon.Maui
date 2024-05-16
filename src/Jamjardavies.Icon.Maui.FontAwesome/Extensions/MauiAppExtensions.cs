@@ -15,20 +15,9 @@ public static class MauiAppExtensions
         builder.ConfigureFonts(
             fonts =>
             {
-                fonts.AddEmbeddedResourceFont(
-                    typeof(MauiAppExtensions).Assembly,
-                    "FontAwesome-Solid.otf",
-                    FontAwesomeExtension.SolidStyle);
-
-                fonts.AddEmbeddedResourceFont(
-                    typeof(MauiAppExtensions).Assembly,
-                    "FontAwesome-Regular.otf",
-                    FontAwesomeExtension.RegularStyle);
-
-                fonts.AddEmbeddedResourceFont(
-                    typeof(MauiAppExtensions).Assembly,
-                    "FontAwesomeBrands-Regular.otf",
-                    FontAwesomeExtension.BrandsStyle);
+                fonts.AddEmbeddedResourceFont(FontAwesomeIconStyles.Solid)
+                     .AddEmbeddedResourceFont(FontAwesomeIconStyles.Regular)
+                     .AddEmbeddedResourceFont(FontAwesomeIconStyles.Brands);
             });
 
         return builder;
@@ -37,4 +26,10 @@ public static class MauiAppExtensions
     #endregion
 
     #endregion
+
+    private static IFontCollection AddEmbeddedResourceFont(this IFontCollection fonts, FontAwesomeIconStyles style)
+    {
+        fonts.AddEmbeddedResourceFont(typeof(MauiAppExtensions).Assembly, $"FontAwesome-{style}.otf", FontAwesomeExtension.StyleMap[style]);
+        return fonts;
+    }
 }

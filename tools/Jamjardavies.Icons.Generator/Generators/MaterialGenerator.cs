@@ -17,31 +17,61 @@ internal partial class MaterialGenerator : IGenerator
 ///     <seealso href=""https://github.com/google/material-design-icons"" />
 /// </summary>";
     
-    private static Regex PropReg = new(@"\([^)]*\)");
+    private static Regex PropReg = new(@"\([^)]*\)", RegexOptions.Compiled);
+    private static Regex FileRegex = new(@"MaterialSymbols(.*)\[.*\]", RegexOptions.Compiled);
 
     /// <inheritdoc />
     public int Generate(IEnumerable<string> arguments)
     {
         string[] args = arguments.ToArray();
 
-        if (args.Length != 3)
+        if (args.Length != 2)
         {
-            Console.Error.WriteLine("Run using Material <codepoints> <version> <style>");
+            Console.Error.WriteLine("Run using Material <directory> <version>");
             return -1;
         }
 
         string path = args[0];
         string version = args[1];
-        string style = args[2];
-
-        if (!File.Exists(path))
+        
+        if (!Directory.Exists(path))
         {
             Console.Error.WriteLine("codepoints path invalid.");
             return -1;
         }
 
-        string data = File.ReadAllText(path);
-        string[] lines = data.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);
+        Dictionary<string, Icon> icons = [];
+
+        IEnumerable<string> files = Directory.GetFiles(path, "*.codepoints");
+
+        foreach (string file in files)
+        {
+            string style = Path.GetFileNameWithoutExtension(FileRegex.Replace(file, "$1"));
+            string data = File.ReadAllText(file).ReplaceLineEndings();
+            string[] lines = data.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);
+
+            foreach (string line in lines)
+            {
+                (string name, string glyph) = line.Split(' ', StringSplitOptions.RemoveEmptyEntries) switch
+                {
+                    [{ } a, { } b] => (a, b),
+                    _ => (string.Empty, string.Empty)
+                };
+
+                if (!icons.TryGetValue(name, out Icon? icon))
+                {
+                    icon = new Icon
+                    {
+                        Name = name,
+                        Glyph = glyph
+                    };
+
+                    icons[name] = icon;
+                }
+
+                icon.Styles.Add(style);
+            }
+        }
 
         AutoStringBuilder sb = new();
         sb.WriteLine(copyright);
@@ -57,20 +87,15 @@ internal partial class MaterialGenerator : IGenerator
 
         using (sb.Indent())
         {
-            foreach (string line in lines)
+            foreach (Icon icon in icons.Values)
             {
-                (string label, string unicode) = line.Split(' ', StringSplitOptions.RemoveEmptyEntries) switch
-                {
-                    [string a, string b] => (a, b),
-                    _ => default
-                };
+                IEnumerable<string> styles = icon.Styles.Select(s => $"IconStyle(\"Material{s}\")");
 
                 sb.WriteLine("/// <summary>");
-                sb.WriteLine($"/// \tMaterial icon for {label}");
+                sb.WriteLine($"/// \tMaterial icon for {icon.Name}");
                 sb.WriteLine("/// </summary>");
-                // sb.WriteLine($"/// <see href=\"URL/{kvp.Key}\" />");
-                sb.WriteLine($"[Description(\"{label}\"), IconId(\"{label}\"), IconStyle(\"Material{style}\")]");
-                sb.WriteLine($"{Safe(label)} = 0x{unicode},");
+                sb.WriteLine($"[Description(\"{icon.Name}\"), IconId(\"{icon.Name}\"), {string.Join(", ", styles)}]");
+                sb.WriteLine($"{Safe(icon.Name)} = 0x{icon.Glyph},");
             }
         }
 
@@ -121,5 +146,14 @@ internal partial class MaterialGenerator : IGenerator
         }
 
         return stringBuilder.ToString();
+    }
+
+    private class Icon
+    {
+        public string Name { get; set; }
+
+        public string Glyph { get; set; } = string.Empty;
+
+        public List<string> Styles { get; } = [];
     }
 }

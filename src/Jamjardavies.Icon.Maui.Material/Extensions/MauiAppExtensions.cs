@@ -15,10 +15,9 @@ public static class MauiAppExtensions
         builder.ConfigureFonts(
             fonts =>
             {
-                fonts.AddEmbeddedResourceFont(
-                    typeof(MauiAppExtensions).Assembly,
-                    "MaterialSymbolsOutlined.ttf",
-                    MaterialExtension.OutlinedStyle);
+                fonts.AddEmbeddedResourceFont(MaterialIconStyles.Outlined)
+                     .AddEmbeddedResourceFont(MaterialIconStyles.Rounded)
+                     .AddEmbeddedResourceFont(MaterialIconStyles.Sharp);
             });
 
         return builder;
@@ -27,4 +26,10 @@ public static class MauiAppExtensions
     #endregion
 
     #endregion
+
+    private static IFontCollection AddEmbeddedResourceFont(this IFontCollection fonts, MaterialIconStyles style)
+    {
+        fonts.AddEmbeddedResourceFont(typeof(MauiAppExtensions).Assembly, $"MaterialSymbols{style}.ttf", MaterialExtension.StyleMap[style]);
+        return fonts;
+    }
 }

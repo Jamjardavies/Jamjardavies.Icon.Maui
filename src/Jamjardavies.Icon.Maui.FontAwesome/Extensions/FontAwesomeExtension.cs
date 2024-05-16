@@ -17,11 +17,13 @@ public sealed class FontAwesomeExtension : IconExtension<FontAwesomeIcon, FontAw
     internal const string RegularStyle = "FontAwesomeRegular";
     internal const string BrandsStyle = "FontAwesomeBrands";
 
-    /// <inheritdoc />
-    protected override Dictionary<FontAwesomeIconStyles, string> IconStyleMap { get; } = new()
+    internal static readonly Dictionary<FontAwesomeIconStyles, string> StyleMap = new()
     {
         { FontAwesomeIconStyles.Solid, SolidStyle },
         { FontAwesomeIconStyles.Regular, RegularStyle },
         { FontAwesomeIconStyles.Brands, BrandsStyle }
     };
+
+    /// <inheritdoc />
+    protected override Dictionary<FontAwesomeIconStyles, string> IconStyleMap => StyleMap;
 }

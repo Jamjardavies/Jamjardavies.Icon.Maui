@@ -2,7 +2,7 @@
   "profiles": {
     "Jamjardavies.Icons.Generator": {
       "commandName": "Project",
-      "commandLineArgs": "Material MaterialSymbolsOutlined.codepoints 4.0.0 Outlined"
+      "commandLineArgs": "Material C:\\Users\\jamja\\OneDrive\\Desktop\\Material 4.0.0"
     }
   }
 }
