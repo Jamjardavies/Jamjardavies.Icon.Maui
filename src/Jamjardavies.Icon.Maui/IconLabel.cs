@@ -37,7 +37,7 @@ public class IconLabel : Label, IIcon, ISpinnable
     /// </summary>
     public Icon? Icon
     {
-        get => (Icon?)this.GetValue(IconProperty);
+        get => this.GetValue(IconProperty) as Icon;
         set => this.SetValue(IconProperty, value);
     }
 
