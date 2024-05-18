@@ -6,6 +6,10 @@ namespace Jamjardavies.Icons.Generator.Generators;
 
 internal partial class MaterialGenerator : IGenerator
 {
+    /*
+     * Generate from variable fonts:
+     *      fonttools varLib.mutator MaterialSymbolsSharp.ttf FILL=1 GRAD=0 opsz=24 wght=400
+     */
     const string copyright = @"// <copyright file=""MaterialIcon.cs"" author=""Jamjardavies"">
 //      Copyright (c) Jamjardavies. All rights reserved.
 // </copyright>";
@@ -70,6 +74,7 @@ internal partial class MaterialGenerator : IGenerator
                 }
 
                 icon.Styles.Add(style);
+                icon.Styles.Add($"{style}Filled");
             }
         }
 

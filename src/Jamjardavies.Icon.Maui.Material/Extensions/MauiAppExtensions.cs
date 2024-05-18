@@ -16,8 +16,11 @@ public static class MauiAppExtensions
             fonts =>
             {
                 fonts.AddEmbeddedResourceFont(MaterialIconStyles.Outlined)
+                     .AddEmbeddedResourceFont(MaterialIconStyles.OutlinedFilled)
                      .AddEmbeddedResourceFont(MaterialIconStyles.Rounded)
-                     .AddEmbeddedResourceFont(MaterialIconStyles.Sharp);
+                     .AddEmbeddedResourceFont(MaterialIconStyles.RoundedFilled)
+                     .AddEmbeddedResourceFont(MaterialIconStyles.Sharp)
+                     .AddEmbeddedResourceFont(MaterialIconStyles.SharpFilled);
             });
 
         return builder;
