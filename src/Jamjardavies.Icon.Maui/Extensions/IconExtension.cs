@@ -5,12 +5,13 @@
 using System.ComponentModel;
 using System.Globalization;
 using System.Reflection;
+using Microsoft.Maui.Controls.Xaml;
 using Microsoft.Maui.Graphics.Converters;
 
 namespace Jamjardavies.Icon.Maui;
 
 [ContentProperty(nameof(Icon))]
-public abstract class IconExtension<TIcon, TIconStyle> : BindableObject, IMarkupExtension
+public abstract class IconExtension<TIcon, TIconStyle> : BindableObject, IMarkupExtension<BindingBase>, IValueConverter
     where TIcon : Enum
     where TIconStyle : Enum
 {
@@ -87,13 +88,26 @@ public abstract class IconExtension<TIcon, TIconStyle> : BindableObject, IMarkup
     #region IMarkupExtension Members
 
     /// <inheritdoc />
-    public object? ProvideValue(IServiceProvider serviceProvider)
+    object? IMarkupExtension.ProvideValue(IServiceProvider serviceProvider)
     {
-        if (this.Icon is null)
+        IProvideValueTarget valueProvider = serviceProvider.GetService<IProvideValueTarget>()
+                                         ?? throw new ArgumentException("Unable to get IProvideValueTarget service.");
+
+        if (valueProvider.TargetObject is Setter setter)
         {
-            return null;
+            return this.Convert(
+                null,
+                this.GetType(),
+                new IconBinding(setter.Property.ReturnType, valueProvider.TargetObject),
+                CultureInfo.CurrentCulture);
         }
 
+        return this.ProvideValue(serviceProvider);
+    }
+
+    /// <inheritdoc />
+    public BindingBase ProvideValue(IServiceProvider serviceProvider)
+    {
         IProvideValueTarget valueProvider = serviceProvider.GetService<IProvideValueTarget>()
                                          ?? throw new ArgumentException("Unable to get IProvideValueTarget service.");
         Type propertyType;
@@ -112,24 +126,12 @@ public abstract class IconExtension<TIcon, TIconStyle> : BindableObject, IMarkup
             };
         }
 
-        Icon icon = new(this.Icon, this.GetIconStyle());
-
-        if (this.Converter is not null)
+        return new Binding
         {
-            return this.Converter.Convert(icon, propertyType, this.ConverterParameter, CultureInfo.CurrentCulture);
-        }
-
-        if (!BindableTypeMap.TryGetValue(propertyType, out BindableType type))
-        {
-            return null;
-        }
-
-        return type switch
-        {
-            BindableType.Icon => icon,
-            BindableType.String => this.PopulateString(valueProvider.TargetObject),
-            BindableType.ImageSource => this.Icon.ToImageSource(this.GetIconStyle(), this.IconColor, this.IconSize),
-            _ => throw new InvalidOperationException()
+            Converter = this,
+            ConverterParameter = new IconBinding(propertyType, valueProvider.TargetObject),
+            Mode = BindingMode.OneWay,
+            Source = this
         };
     }
 
@@ -182,4 +184,44 @@ public abstract class IconExtension<TIcon, TIconStyle> : BindableObject, IMarkup
     }
 
     #endregion
+
+    /// <inheritdoc />
+    public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
+    {
+        if (parameter is not IconBinding binding)
+        {
+            return null;
+        }
+
+        if (this.Icon is null)
+        {
+            return null;
+        }
+
+        Icon icon = new(this.Icon, this.GetIconStyle());
+
+        if (this.Converter is not null)
+        {
+            return this.Converter.Convert(icon, binding.TargetType, this.ConverterParameter, CultureInfo.CurrentCulture);
+        }
+
+        if (!BindableTypeMap.TryGetValue(binding.TargetType, out BindableType type))
+        {
+            return null;
+        }
+
+        return type switch
+        {
+            BindableType.Icon => icon,
+            BindableType.String => this.PopulateString(binding.TargetObject),
+            BindableType.ImageSource => this.Icon.ToImageSource(this.GetIconStyle(), this.IconColor, this.IconSize),
+            _ => throw new InvalidOperationException()
+        };
+    }
+
+    /// <inheritdoc />
+    public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
+    {
+        throw new NotImplementedException();
+    }
 }

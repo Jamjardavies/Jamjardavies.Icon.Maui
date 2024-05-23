@@ -5,3 +5,5 @@
 namespace Jamjardavies.Icon.Maui;
 
 public sealed record Icon(Enum? Glyph, string Style);
+
+internal sealed record IconBinding(Type TargetType, object TargetObject);
