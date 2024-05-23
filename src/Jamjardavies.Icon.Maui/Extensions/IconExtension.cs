@@ -3,16 +3,39 @@
 // </copyright>
 
 using System.ComponentModel;
+using System.Globalization;
 using System.Reflection;
 using Microsoft.Maui.Graphics.Converters;
 
 namespace Jamjardavies.Icon.Maui;
 
 [ContentProperty(nameof(Icon))]
-public abstract class IconExtension<TIcon, TIconStyle> : IMarkupExtension
+public abstract class IconExtension<TIcon, TIconStyle> : BindableObject, IMarkupExtension
     where TIcon : Enum
     where TIconStyle : Enum
 {
+    public static readonly BindableProperty IconProperty = BindableProperty.Create(
+        nameof(Icon),
+        typeof(TIcon?),
+        typeof(IconExtension<TIcon, TIconStyle>));
+
+    public static readonly BindableProperty IconStyleProperty = BindableProperty.Create(
+        nameof(IconStyle),
+        typeof(TIconStyle?),
+        typeof(IconExtension<TIcon, TIconStyle>));
+
+    public static readonly BindableProperty IconColorProperty = BindableProperty.Create(
+        nameof(IconColor),
+        typeof(Color),
+        typeof(IconExtension<TIcon, TIconStyle>),
+        Colors.White);
+
+    public static readonly BindableProperty IconSizeProperty = BindableProperty.Create(
+        nameof(IconSize),
+        typeof(double),
+        typeof(IconExtension<TIcon, TIconStyle>),
+        32d);
+
     private static readonly Dictionary<Type, BindableType> BindableTypeMap = new()
     {
         { typeof(Icon), BindableType.Icon },
@@ -23,15 +46,35 @@ public abstract class IconExtension<TIcon, TIconStyle> : IMarkupExtension
 
     #region Properties
 
-    public TIcon? Icon { get; set; }
+    public TIcon? Icon
+    {
+        get => (TIcon?)this.GetValue(IconProperty);
+        set => this.SetValue(IconProperty, value);
+    }
 
-    public TIconStyle? IconStyle { get; set; }
+    public TIconStyle? IconStyle
+    {
+        get => (TIconStyle)this.GetValue(IconStyleProperty);
+        set => this.SetValue(IconStyleProperty, value);
+    }
 
     [TypeConverter(typeof(ColorTypeConverter))]
-    public Color IconColor { get; set; } = Colors.White;
+    public Color IconColor
+    {
+        get => (Color)this.GetValue(IconColorProperty);
+        set => this.SetValue(IconColorProperty, value);
+    }
 
     [TypeConverter(typeof(FontSizeConverter))]
-    public double IconSize { get; set; } = 32;
+    public double IconSize
+    {
+        get => (double)this.GetValue(IconSizeProperty);
+        set => this.SetValue(IconSizeProperty, value);
+    }
+
+    public IValueConverter? Converter { get; set; }
+
+    public object? ConverterParameter { get; set; }
 
     protected abstract Dictionary<TIconStyle, string> IconStyleMap { get; }
 
@@ -46,27 +89,44 @@ public abstract class IconExtension<TIcon, TIconStyle> : IMarkupExtension
     /// <inheritdoc />
     public object? ProvideValue(IServiceProvider serviceProvider)
     {
-        IProvideValueTarget valueProvider = serviceProvider.GetService<IProvideValueTarget>()
-                                         ?? throw new ArgumentException("Unable to get IProvideValueTarget service.");
-
         if (this.Icon is null)
         {
             return null;
         }
 
-        if (valueProvider.TargetProperty is not BindableProperty bindableProperty)
+        IProvideValueTarget valueProvider = serviceProvider.GetService<IProvideValueTarget>()
+                                         ?? throw new ArgumentException("Unable to get IProvideValueTarget service.");
+        Type propertyType;
+
+        if (valueProvider.TargetObject is Setter setter)
         {
-            return null;
+            propertyType = setter.Property.ReturnType;
+        }
+        else
+        {
+            propertyType = valueProvider.TargetProperty switch
+            {
+                BindableProperty bp => bp.ReturnType,
+                PropertyInfo pi => pi.PropertyType,
+                _ => throw new InvalidOperationException()
+            };
         }
 
-        if (!BindableTypeMap.TryGetValue(bindableProperty.ReturnType, out BindableType type))
+        Icon icon = new(this.Icon, this.GetIconStyle());
+
+        if (this.Converter is not null)
+        {
+            return this.Converter.Convert(icon, propertyType, this.ConverterParameter, CultureInfo.CurrentCulture);
+        }
+
+        if (!BindableTypeMap.TryGetValue(propertyType, out BindableType type))
         {
             return null;
         }
 
         return type switch
         {
-            BindableType.Icon => new Icon(this.Icon, this.GetIconStyle()),
+            BindableType.Icon => icon,
             BindableType.String => this.PopulateString(valueProvider.TargetObject),
             BindableType.ImageSource => this.Icon.ToImageSource(this.GetIconStyle(), this.IconColor, this.IconSize),
             _ => throw new InvalidOperationException()
