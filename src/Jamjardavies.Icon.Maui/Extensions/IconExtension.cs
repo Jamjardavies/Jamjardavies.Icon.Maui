@@ -5,12 +5,14 @@
 using System.ComponentModel;
 using System.Globalization;
 using System.Reflection;
-using Microsoft.Maui.Controls.Xaml;
 using Microsoft.Maui.Graphics.Converters;
 
 namespace Jamjardavies.Icon.Maui;
 
 [ContentProperty(nameof(Icon))]
+#if NET9_0_OR_GREATER
+[RequireService(new[] { typeof(IProvideValueTarget) })]
+#endif
 public abstract class IconExtension<TIcon, TIconStyle> : BindableObject, IMarkupExtension<BindingBase>, IValueConverter
     where TIcon : Enum
     where TIconStyle : Enum
