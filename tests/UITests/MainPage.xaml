@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:icon="http://www.jamjardavies.co.uk/maui/icon"
+             xmlns:uiTests="clr-namespace:UITests"
+             x:Class="UITests.MainPage"
+             x:DataType="uiTests:MainPageViewModel">
+
+    <ContentPage.Resources>
+        <Color x:Key="ThemeAccent">#C9F04A</Color>
+        <Color x:Key="ThemeAccent2">#FF7868</Color>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0"
+                             Spacing="25">
+
+            <icon:IconLabel Icon="{icon:FontAwesome FontAwesome}" TextColor="{DynamicResource ThemeAccent}" />
+            <Button ImageSource="{icon:FontAwesome FontAwesome, IconColor={DynamicResource ThemeAccent}}" Text="Image Source Test" />
+
+            <Button ImageSource="{icon:FontAwesome FontAwesome, IconColor={DynamicResource ThemeAccent}}" Text="Image Source Trigger Test"
+                    Command="{Binding ToggleTriggeredCommand}">
+
+                <Button.Triggers>
+                    <DataTrigger TargetType="Button"
+                                 Binding="{Binding Triggered}"
+                                 Value="True">
+
+                        <Setter Property="ImageSource" Value="{icon:FontAwesome FontAwesome, IconColor={DynamicResource ThemeAccent2}}" />
+
+                    </DataTrigger>
+                </Button.Triggers>
+
+            </Button>
+
+            <Button ImageSource="{icon:FontAwesome {Binding Test}, IconColor={DynamicResource ThemeAccent}}" Text="Image Source Test + Binding" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

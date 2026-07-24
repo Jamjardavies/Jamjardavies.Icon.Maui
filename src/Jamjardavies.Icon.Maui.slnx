@@ -8,6 +8,9 @@
     <Project Path="Jamjardavies.Icon.Maui.Material/Jamjardavies.Icon.Maui.Material.csproj" />
     <Project Path="Jamjardavies.Icon.Maui/Jamjardavies.Icon.Maui.csproj" />
   </Folder>
+  <Folder Name="/Tests/">
+    <Project Path="../tests/UITests/UITests.csproj" Id="6c6f7943-4077-4b9c-a28e-3885323f4472" />
+  </Folder>
   <Folder Name="/Tools/">
     <Project Path="../tools/Jamjardavies.Icons.Generator/Jamjardavies.Icons.Generator.csproj" />
   </Folder>

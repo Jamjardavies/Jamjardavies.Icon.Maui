@@ -35,7 +35,7 @@ public static class IconEnumExtensions
     }
 
     public static FontImageSource ToImageSource<TIcon>(this TIcon icon, string iconStyle, Color color, double size)
-        where TIcon : Enum
+        where TIcon : Enum?
     {
         return icon.ToImageSource(iconStyle, color, size, false);
     }
