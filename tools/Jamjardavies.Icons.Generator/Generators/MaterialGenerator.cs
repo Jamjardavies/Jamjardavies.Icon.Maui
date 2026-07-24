@@ -20,7 +20,7 @@ internal partial class MaterialGenerator : IGenerator
 ///     <see href=""https://developers.google.com/fonts/docs/material_icons"" />
 ///     <seealso href=""https://github.com/google/material-design-icons"" />
 /// </summary>";
-    
+
     private static Regex PropReg = new(@"\([^)]*\)", RegexOptions.Compiled);
     private static Regex FileRegex = new(@"MaterialSymbols(.*)\[.*\]", RegexOptions.Compiled);
 
@@ -37,7 +37,7 @@ internal partial class MaterialGenerator : IGenerator
 
         string path = args[0];
         string version = args[1];
-        
+
         if (!Directory.Exists(path))
         {
             Console.Error.WriteLine("codepoints path invalid.");
@@ -130,12 +130,12 @@ internal partial class MaterialGenerator : IGenerator
         for (int i = 0; i < matches.Count; i++)
         {
             Match match = matches[i];
-            
+
             if (match.Value.IndexOf("Hand", StringComparison.InvariantCultureIgnoreCase) <= -1)
             {
                 continue;
             }
-            
+
             hasMatch = true;
             break;
         }
@@ -155,7 +155,7 @@ internal partial class MaterialGenerator : IGenerator
 
     private class Icon
     {
-        public string Name { get; set; }
+        public required string Name { get; set; }
 
         public string Glyph { get; set; } = string.Empty;
 

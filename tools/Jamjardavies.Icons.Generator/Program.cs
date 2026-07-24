@@ -13,7 +13,7 @@ Dictionary<string, IGenerator> generatorMap = new()
 
 string ListGenerators()
 {
-    return $"Valid Generators:\n{string.Join("\n\t", generatorMap.Keys)}";
+    return $"Valid Generators:\n\t{string.Join("\n\t", generatorMap.Keys)}";
 }
 
 if (args.Length == 0)

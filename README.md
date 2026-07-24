@@ -1,7 +1,11 @@
 # Jamjardavies.Icon.Maui
 Readme will be updated soon with more information, below is a quick-start guide.
 
+The current release targets .NET 10 and uses .NET MAUI 10.
+
 ## Using Jamjardavies.Icon.Maui.FontAwesome
+Font Awesome version used is 7.3.1.
+
 First, inside of the `MauiProgram.cs` file, add `UseFontAwesome`
 
 ```csharp
@@ -22,6 +26,11 @@ return MauiApp.CreateBuilder()
 ```
 
 ## Xaml
+Before usage, make sure to add the namespace:
+```xml
+xmlns:icon="http://www.jamjardavies.co.uk/maui/icon"
+```
+
 ### Maui Label
 ```xml
 <Label Text="{icon:FontAwesome Spinner}" />

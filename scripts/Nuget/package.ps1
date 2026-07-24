@@ -1,6 +1,6 @@
 $Config = "Release"
 $Artefacts = "..\..\Artefacts"
-$Sln = "..\..\src\Jamjardavies.Icon.Maui.sln"
+$Sln = "..\..\src\Jamjardavies.Icon.Maui.slnx"
 
 if (Test-Path -Path $Artefacts)
 {

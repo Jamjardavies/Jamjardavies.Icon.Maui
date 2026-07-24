@@ -84,7 +84,7 @@ internal class FontAwesomeGenerator : IGenerator
 
         sb.WriteLine("}");
 
-        File.WriteAllText("FontAwesomeIcons.cs", sb.ToString());
+        File.WriteAllText("FontAwesomeIcon.cs", sb.ToString());
 
         return 0;
     }
