@@ -72,18 +72,7 @@ public abstract class IconExtension<TIcon, TIconStyle> : Element, IMarkupExtensi
     #region IMarkupExtension<BindingBase> Members
 
     /// <inheritdoc />
-    object? IMarkupExtension.ProvideValue(IServiceProvider serviceProvider)
-    {
-        IProvideValueTarget valueProvider = serviceProvider.GetService<IProvideValueTarget>() ?? throw new ArgumentException("Unable to get IProvideValueTarget service.");
-
-        if (valueProvider.TargetObject is not Setter setter)
-        {
-            return this.ProvideValue(serviceProvider);
-        }
-
-        this.SetResourceParent(serviceProvider, valueProvider);
-        return this.Convert(null, this.GetType(), new IconBinding(setter.Property.ReturnType, valueProvider.TargetObject), CultureInfo.CurrentCulture);
-    }
+    object IMarkupExtension.ProvideValue(IServiceProvider serviceProvider) => this.ProvideValue(serviceProvider);
 
     /// <inheritdoc />
     public BindingBase ProvideValue(IServiceProvider serviceProvider)
@@ -123,8 +112,7 @@ public abstract class IconExtension<TIcon, TIconStyle> : Element, IMarkupExtensi
             return null;
         }
 
-        if (value is not TIcon boundIcon ||
-            !Enum.IsDefined(typeof(TIcon), boundIcon))
+        if (value is not TIcon boundIcon || !Enum.IsDefined(typeof(TIcon), boundIcon))
         {
             return null;
         }
@@ -151,9 +139,9 @@ public abstract class IconExtension<TIcon, TIconStyle> : Element, IMarkupExtensi
     }
 
     /// <inheritdoc />
-    public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
+    public object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
     {
-        throw new NotImplementedException();
+        throw new NotSupportedException();
     }
 
     #endregion
@@ -236,12 +224,14 @@ public abstract class IconExtension<TIcon, TIconStyle> : Element, IMarkupExtensi
             return;
         }
 
-        this.SetBinding(BindingContextProperty, new Binding
-        {
-            Path = nameof(this.BindingContext),
-            Source = this.Parent,
-            Mode = BindingMode.OneWay
-        });
+        this.SetBinding(
+            BindingContextProperty,
+            new Binding
+            {
+                Path = nameof(this.BindingContext),
+                Source = this.Parent,
+                Mode = BindingMode.OneWay
+            });
     }
 
     #endregion

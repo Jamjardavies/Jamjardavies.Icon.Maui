@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:icon="http://www.jamjardavies.co.uk/maui/icon"
+             xmlns:uiTests="clr-namespace:UITests"
+             x:Class="UITests.ButtonsPage"
+             x:DataType="uiTests:MainPageViewModel"
+             Title="Buttons">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24"
+                             Spacing="24">
+
+            <Button Text="Toggle bound icons and triggers"
+                    Command="{Binding ToggleTriggeredCommand}" />
+
+            <!-- Buttons -->
+            <VerticalStackLayout Spacing="12">
+                <Label Text="Button"
+                       Style="{StaticResource TestSectionHeaderStyle}" />
+
+                <Label Text="Static ImageSource"
+                       Style="{StaticResource TestCaptionStyle}" />
+                <Button ImageSource="{icon:FontAwesome FontAwesome, IconColor={DynamicResource ThemeAccent}}"
+                        Text="Static image source" />
+
+                <Label Text="Bound ImageSource"
+                       Style="{StaticResource TestCaptionStyle}" />
+                <Button ImageSource="{icon:FontAwesome {Binding Test}, IconColor={DynamicResource ThemeAccent}}"
+                        Text="Bound image source"
+                        Command="{Binding ToggleTriggeredCommand}" />
+
+                <Label Text="Style ImageSource setter"
+                       Style="{StaticResource TestCaptionStyle}" />
+                <Button Text="Style-set image source">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="ImageSource"
+                                    Value="{icon:FontAwesome FontAwesome, IconColor={DynamicResource ThemeAccent}}" />
+                        </Style>
+                    </Button.Style>
+                </Button>
+
+                <Label Text="DataTrigger ImageSource setter"
+                       Style="{StaticResource TestCaptionStyle}" />
+                <Button ImageSource="{icon:FontAwesome FontAwesome, IconColor={DynamicResource ThemeAccent}}"
+                        Text="Tap to toggle trigger"
+                        Command="{Binding ToggleTriggeredCommand}">
+                    <Button.Triggers>
+                        <DataTrigger TargetType="Button"
+                                     Binding="{Binding Triggered}"
+                                     Value="True">
+                            <Setter Property="ImageSource"
+                                    Value="{icon:FontAwesome AddressBook, IconColor={DynamicResource ThemeAccent2}}" />
+                        </DataTrigger>
+                    </Button.Triggers>
+                </Button>
+
+                <Label Text="Text icon"
+                       Style="{StaticResource TestCaptionStyle}" />
+
+                <Button Text="{icon:FontAwesome FontAwesome}"
+                        FontSize="32"
+                        TextColor="{DynamicResource ThemeAccent}" />
+            </VerticalStackLayout>
+
+            <BoxView HeightRequest="1"
+                     Opacity="0.25" />
+
+            <!-- IconButtons -->
+            <VerticalStackLayout Spacing="12">
+                <Label Text="IconButton"
+                       Style="{StaticResource TestSectionHeaderStyle}" />
+
+                <Label Text="Static icon"
+                       Style="{StaticResource TestCaptionStyle}" />
+                <icon:IconButton Icon="{icon:FontAwesome FontAwesome}"
+                                 IconColor="{DynamicResource ThemeAccent}"
+                                 IconSize="32"
+                                 Text="Static icon button" />
+
+                <Label Text="Bound icon"
+                       Style="{StaticResource TestCaptionStyle}" />
+                <icon:IconButton Icon="{icon:FontAwesome {Binding Test}}"
+                                 IconColor="{DynamicResource ThemeAccent}"
+                                 IconSize="32"
+                                 Text="Bound icon button"
+                                 Command="{Binding ToggleTriggeredCommand}" />
+
+                <Label Text="Style Icon setter"
+                       Style="{StaticResource TestCaptionStyle}" />
+                <icon:IconButton IconColor="{DynamicResource ThemeAccent}"
+                                 IconSize="32"
+                                 Text="Style-set icon">
+                    <icon:IconButton.Style>
+                        <Style TargetType="icon:IconButton">
+                            <Setter Property="Icon"
+                                    Value="{icon:FontAwesome FontAwesome}" />
+                        </Style>
+                    </icon:IconButton.Style>
+                </icon:IconButton>
+
+                <Label Text="DataTrigger Icon setter"
+                       Style="{StaticResource TestCaptionStyle}" />
+                <icon:IconButton Icon="{icon:FontAwesome FontAwesome}"
+                                 IconColor="{DynamicResource ThemeAccent}"
+                                 IconSize="32"
+                                 Text="Tap to toggle trigger"
+                                 Command="{Binding ToggleTriggeredCommand}">
+                    <icon:IconButton.Triggers>
+                        <DataTrigger TargetType="icon:IconButton"
+                                     Binding="{Binding Triggered}"
+                                     Value="True">
+                            <Setter Property="Icon"
+                                    Value="{icon:FontAwesome AddressBook}" />
+                            <Setter Property="IconColor"
+                                    Value="{DynamicResource ThemeAccent2}" />
+                        </DataTrigger>
+                    </icon:IconButton.Triggers>
+                </icon:IconButton>
+            </VerticalStackLayout>
+
+            <BoxView HeightRequest="1"
+                     Opacity="0.25" />
+
+            <!-- RadioButtons -->
+            <VerticalStackLayout Spacing="12">
+                <Label Text="RadioButton"
+                       Style="{StaticResource TestSectionHeaderStyle}" />
+
+                <Label Text="Static Content icon"
+                       Style="{StaticResource TestCaptionStyle}" />
+                <RadioButton Content="{icon:FontAwesome FontAwesome}"
+                             FontSize="32"
+                             GroupName="RadioButtonIconTests"
+                             IsChecked="True"
+                             TextColor="{DynamicResource ThemeAccent}"
+                             Value="StaticContent" />
+
+                <Label Text="Bound Content icon"
+                       Style="{StaticResource TestCaptionStyle}" />
+                <RadioButton Content="{icon:FontAwesome {Binding Test}}"
+                             FontSize="32"
+                             GroupName="RadioButtonIconTests"
+                             TextColor="{DynamicResource ThemeAccent}"
+                             Value="BoundContent" />
+
+                <Label Text="Style Content setter"
+                       Style="{StaticResource TestCaptionStyle}" />
+                <RadioButton FontSize="32"
+                             GroupName="RadioButtonIconTests"
+                             TextColor="{DynamicResource ThemeAccent}"
+                             Value="StyleContent">
+                    <RadioButton.Style>
+                        <Style TargetType="RadioButton">
+                            <Setter Property="Content"
+                                    Value="{icon:FontAwesome FontAwesome}" />
+                        </Style>
+                    </RadioButton.Style>
+                </RadioButton>
+
+                <Label Text="DataTrigger Content setter"
+                       Style="{StaticResource TestCaptionStyle}" />
+                <RadioButton Content="{icon:FontAwesome FontAwesome}"
+                             FontSize="32"
+                             GroupName="RadioButtonIconTests"
+                             TextColor="{DynamicResource ThemeAccent}"
+                             Value="TriggeredContent">
+                    <RadioButton.Triggers>
+                        <DataTrigger TargetType="RadioButton"
+                                     Binding="{Binding Triggered}"
+                                     Value="True">
+                            <Setter Property="Content"
+                                    Value="{icon:FontAwesome AddressBook}" />
+                            <Setter Property="TextColor"
+                                    Value="{DynamicResource ThemeAccent2}" />
+                        </DataTrigger>
+                    </RadioButton.Triggers>
+                </RadioButton>
+
+                <Label Text="Nested Label content baseline"
+                       Style="{StaticResource TestCaptionStyle}" />
+                <RadioButton GroupName="RadioButtonIconTests"
+                             Value="NestedLabelContent">
+                    <RadioButton.Content>
+                        <HorizontalStackLayout Spacing="10">
+                            <Label Text="{icon:FontAwesome FontAwesome}"
+                                   FontSize="28"
+                                   TextColor="{DynamicResource ThemeAccent}" />
+                            <Label Text="Nested Label content"
+                                   VerticalTextAlignment="Center" />
+                        </HorizontalStackLayout>
+                    </RadioButton.Content>
+                </RadioButton>
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

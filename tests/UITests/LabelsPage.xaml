@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:icon="http://www.jamjardavies.co.uk/maui/icon"
+             xmlns:uiTests="clr-namespace:UITests"
+             x:Class="UITests.LabelsPage"
+             x:DataType="uiTests:MainPageViewModel"
+             Title="Labels">
+
+    <ContentPage.Resources>
+        <Color x:Key="ThemeAccent">#a47dab</Color>
+        <Color x:Key="ThemeAccent2">#c79a68</Color>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24"
+                             Spacing="24">
+
+            <Button Text="Toggle bound icons and triggers"
+                    Command="{Binding ToggleTriggeredCommand}" />
+
+            <!-- Labels -->
+            <VerticalStackLayout Spacing="12">
+                <Label Text="Label"
+                       Style="{StaticResource TestSectionHeaderStyle}" />
+
+                <Label Text="Static icon"
+                       Style="{StaticResource TestCaptionStyle}" />
+
+                <Label Text="{icon:FontAwesome FontAwesome}"
+                       FontSize="36"
+                       TextColor="{DynamicResource ThemeAccent}" />
+
+                <Label Text="Bound icon"
+                       Style="{StaticResource TestCaptionStyle}" />
+
+                <Label Text="{icon:FontAwesome {Binding Test}}"
+                       FontSize="36"
+                       TextColor="{DynamicResource ThemeAccent}" />
+
+                <Label Text="Style Text setter"
+                       Style="{StaticResource TestCaptionStyle}" />
+
+                <Label Text="DataTrigger setter"
+                       Style="{StaticResource TestCaptionStyle}" />
+
+                <Label Text="{icon:FontAwesome FontAwesome}"
+                       FontSize="36"
+                       TextColor="{DynamicResource ThemeAccent}">
+
+                    <Label.Triggers>
+                        <DataTrigger TargetType="Label"
+                                     Binding="{Binding Triggered}"
+                                     Value="True">
+                            <Setter Property="Text"
+                                    Value="{icon:FontAwesome AddressBook}" />
+                            <Setter Property="TextColor"
+                                    Value="{DynamicResource ThemeAccent2}" />
+                        </DataTrigger>
+                    </Label.Triggers>
+                </Label>
+            </VerticalStackLayout>
+
+            <BoxView HeightRequest="1"
+                     Opacity="0.25" />
+
+            <!-- IconLabels -->
+            <VerticalStackLayout Spacing="12">
+                <Label Text="IconLabel"
+                       Style="{StaticResource TestSectionHeaderStyle}" />
+
+                <Label Text="Static icon"
+                       Style="{StaticResource TestCaptionStyle}" />
+                <icon:IconLabel Icon="{icon:FontAwesome FontAwesome}"
+                                FontSize="36"
+                                TextColor="{DynamicResource ThemeAccent}" />
+
+                <Label Text="Bound icon"
+                       Style="{StaticResource TestCaptionStyle}" />
+                <icon:IconLabel Icon="{icon:FontAwesome {Binding Test}}"
+                                FontSize="36"
+                                TextColor="{DynamicResource ThemeAccent}" />
+
+                <Label Text="Spinning icon"
+                       Style="{StaticResource TestCaptionStyle}" />
+                <icon:IconLabel Icon="{icon:FontAwesome Spinner}"
+                                Spin="True"
+                                SpinDuration="2"
+                                HorizontalOptions="Start"
+                                FontSize="36"
+                                TextColor="{DynamicResource ThemeAccent2}" />
+            </VerticalStackLayout>
+
+            <BoxView HeightRequest="1"
+                     Opacity="0.25" />
+
+            <!-- Spans -->
+            <VerticalStackLayout Spacing="12">
+                <Label Text="Span"
+                       Style="{StaticResource TestSectionHeaderStyle}" />
+
+                <Label Text="Static inline icon"
+                       Style="{StaticResource TestCaptionStyle}" />
+                <Label FontSize="24">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Before " />
+                            <Span Text="{icon:FontAwesome FontAwesome}"
+                                  FontSize="36"
+                                  TextColor="{DynamicResource ThemeAccent}" />
+                            <Span Text=" after" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label Text="Bound inline icon"
+                       Style="{StaticResource TestCaptionStyle}" />
+                <Label FontSize="24">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Before " />
+                            <Span Text="{icon:FontAwesome {Binding Test}}"
+                                  FontSize="36"
+                                  TextColor="{DynamicResource ThemeAccent2}" />
+                            <Span Text=" after" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

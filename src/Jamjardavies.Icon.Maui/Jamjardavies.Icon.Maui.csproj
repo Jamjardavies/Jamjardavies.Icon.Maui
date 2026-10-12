@@ -8,4 +8,8 @@
         <PackageTags>MauiIcons,Icons,Maui,Icon</PackageTags>
     </PropertyGroup>
 
+	<ItemGroup>
+	  <Folder Include="AttachedProperties\" />
+	</ItemGroup>
+
 </Project>
